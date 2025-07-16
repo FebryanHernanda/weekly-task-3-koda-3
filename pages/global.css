@@ -1,0 +1,87 @@
+/* Color Pallete */
+:root {
+  --primary: #1d4ed8;
+  --secondary: #a0a3bd;
+  --tertiary: #dedede;
+  --white: #ffffff;
+  --text-secondary: #696f79;
+}
+
+.primary {
+  background-color: var(--primary);
+}
+
+.secondary {
+  background-color: var(--secondary);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-tertiary {
+  color: var(--tertiary);
+}
+
+.blue {
+  background-color: var(--primary);
+}
+
+.gray {
+  background-color: var(--secondary);
+}
+
+/* Font Size */
+
+.title-large {
+  font-size: 64px;
+}
+
+.title-medium {
+  font-size: 48px;
+}
+
+.title-small {
+  font-size: 32px;
+}
+
+.text-large {
+  font-size: 24px;
+}
+
+.text-medium {
+  font-size: 18px;
+}
+
+.text-small {
+  font-size: 16px;
+}
+
+.text-extra-small {
+  font-size: 14px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.font-regular {
+  font-weight: normal;
+}
+
+/* Reset styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+/* Reset Styles */
