@@ -1,89 +1,12 @@
-/* Color Pallete */
-:root {
-  --primary: #1d4ed8;
-  --secondary: #a0a3bd;
-  --tertiary: #dedede;
-  --white: #ffffff;
-  --text-secondary: #696f79;
+html,
+body {
+  overflow-x: hidden;
 }
 
-.primary {
-  background-color: var(--primary);
-}
-
-.secondary {
-  background-color: var(--secondary);
-}
-
-.text-primary {
-  color: var(--primary);
-}
-
-.text-secondary {
-  color: var(--text-secondary);
-}
-
-.text-tertiary {
-  color: var(--tertiary);
-}
-
-.blue {
-  background-color: var(--primary);
-}
-
-.gray {
-  background-color: var(--secondary);
-}
-
-/* Font Size */
-
-.title-large {
-  font-size: 64px;
-}
-
-.title-medium {
-  font-size: 48px;
-}
-
-.title-small {
-  font-size: 32px;
-}
-
-.text-large {
-  font-size: 24px;
-}
-
-.text-medium {
-  font-size: 18px;
-}
-
-.text-small {
-  font-size: 16px;
-}
-
-.text-extra-small {
-  font-size: 14px;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.font-regular {
-  font-weight: normal;
-}
-
-/* Reset styles */
-
-* {
-  margin: 0;
-  padding: 0;
-  max-width: 1920px;
-  font-family: "Mulish", sans-serif;
-}
-
-a {
-  text-decoration: none;
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* Components */
@@ -94,26 +17,21 @@ a {
   border-radius: 100%;
 }
 
-.card {
-  width: 358px;
-  height: 157px;
-  border-radius: 8px;
-}
-
 .card-login {
   background-color: var(--white);
-  width: 546px;
+  width: 600px;
   border-radius: 8px;
   padding: 50px;
 }
 
 .background {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)),
     url(/assets/images/background/background-login.png);
-  min-height: 100vh;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 50px;
+  min-height: 100vh;
 }
 
 .center {
@@ -128,7 +46,7 @@ a {
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 20px;
+  gap: 50px;
 }
 
 .form-wrapper {
@@ -185,8 +103,16 @@ a {
   justify-content: space-between;
 }
 
+.sign-up a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
 .icon {
-  width: 35px;
+  width: 30px;
 }
 
 .signup-button {
@@ -195,9 +121,10 @@ a {
   place-content: center;
   gap: 25px;
   width: 170px;
-  height: 34px;
+  height: 64px;
   border-radius: 4px;
-  padding: 1rem;
+  cursor: pointer;
+  border: none;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -231,30 +158,35 @@ a {
   background-color: var(--secondary);
 }
 
-/* Breakpoints */
-
-@media only screen and (max-width: 768px) {
-  .card-login {
-    width: 430px;
-    padding: 20px;
-  }
-
-  .shape {
-    width: 100px;
-  }
-
-  .signup-step {
-    display: none;
-  }
+.wrapper-eye {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-@media only screen and (max-width: 500px) {
+.wrapper-eye input {
+  width: 100%;
+}
+
+.eye {
+  padding-right: 20px;
+  position: absolute;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+/* Breakpoints */
+
+@media only screen and (max-width: 600px) {
+  .background {
+    padding: 10px;
+  }
+
   .container {
     gap: 30px;
   }
 
   .card-login {
-    width: 300px;
     padding: 20px;
   }
 
@@ -274,6 +206,7 @@ a {
     justify-content: center;
     gap: 100px;
   }
+
   .signup-button {
     display: flex;
     gap: 25px;
@@ -281,7 +214,6 @@ a {
     height: 14px;
     border-radius: 4px;
     padding: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
   .text-medium {
@@ -293,9 +225,20 @@ a {
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 375px) {
+  .background {
+    padding: 10px;
+  }
+
   .card-login {
-    width: 250px;
     padding: 20px;
+  }
+
+  .sign-up {
+    justify-content: space-between;
+  }
+
+  .signup-step {
+    display: none;
   }
 }
