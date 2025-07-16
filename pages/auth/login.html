@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sign Up Ticketing Website" />
+    <title>Tickitz</title>
+    <link rel="stylesheet" href="/pages/global.css" />
+    <link rel="stylesheet" href="/pages/auth/styles.css" />
+  </head>
+  <body class="background center">
+    <header>
+      <div>
+        <img src="/assets/images/icon/tickitz-logo.png" alt="Tickitz Logo" />
+      </div>
+    </header>
+    <main>
+      <section class="card-login">
+        <!-- Container Card -->
+        <div class="container">
+          <div class="wrapper-title">
+            <h1 class="font-regular title-extra-small">Welcome Back👋</h1>
+            <h5 class="text-medium text-secondary font-regular">
+              Sign in with your data that you entered during your registration
+            </h5>
+          </div>
+
+          <!-- Form Wrapper -->
+          <form class="form-wrapper">
+            <!-- Wrapper -->
+            <div class="wrapper">
+              <label for="email" class="text-medium">Email</label>
+              <input
+                class="input-component text-medium"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+              />
+            </div>
+
+            <div class="wrapper">
+              <label for="password" class="text-medium">Password</label>
+              <div class="wrapper-eye">
+                <input
+                  class="input-component text-medium"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Enter your password"
+                />
+                <i class="fa-solid fa-eye eye"></i>
+              </div>
+            </div>
+
+            <button type="submit" class="button text-medium blue text-white">
+              Login
+            </button>
+
+            <h5 class="text-medium text-secondary font-regular forgot-password">
+              <a href="/pages/auth/signup.html" cl>Forgot your password?</a>
+            </h5>
+          </form>
+          <!-- Form Wrapper -->
+
+          <!-- Split -->
+          <div class="splitter">
+            <div class="shape"></div>
+            <p class="text-secondary">Or</p>
+            <div class="shape"></div>
+          </div>
+          <!-- Split -->
+
+          <!-- Button Sign Up -->
+          <div class="sign-up">
+            <div class="signup-button">
+              <a href="#">
+                <img
+                  src="/assets/images/icon/google-icon.svg"
+                  alt="Google Icon"
+                  class="icon"
+                />
+                <p class="text-signup text-secondary text-medium">Google</p>
+              </a>
+            </div>
+
+            <div class="signup-button">
+              <a href="#">
+                <img
+                  src="/assets/images/icon/fb-icon.svg"
+                  alt="Facebook Icon"
+                  class="icon"
+                />
+                <p class="text-signup text-secondary text-medium">Facebook</p>
+              </a>
+            </div>
+          </div>
+          <!-- Button Sign Up -->
+        </div>
+        <!-- Container -->
+      </section>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/21b38282b1.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
