@@ -27,6 +27,10 @@
   color: var(--tertiary);
 }
 
+.text-white {
+  color: var(--white);
+}
+
 .blue {
   background-color: var(--primary);
 }
@@ -37,15 +41,15 @@
 
 /* Font Size */
 
-.title-large {
+.title-extra-large {
   font-size: 64px;
 }
 
-.title-medium {
+.title-extra-medium {
   font-size: 48px;
 }
 
-.title-small {
+.title-extra-small {
   font-size: 32px;
 }
 
@@ -69,8 +73,16 @@
   font-weight: bold;
 }
 
+.font-semi-bold {
+  font-weight: 700;
+}
+
 .font-regular {
   font-weight: normal;
+}
+
+.font-light {
+  font-weight: 500;
 }
 
 /* Reset styles */
