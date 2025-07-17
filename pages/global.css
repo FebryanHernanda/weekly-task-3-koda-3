@@ -2,8 +2,10 @@
 :root {
   --primary: #1d4ed8;
   --secondary: #a0a3bd;
-  --tertiary: #dedede;
+  --tertiary: #ececec;
+  --blue-secondary: #1d4ed833;
   --white: #ffffff;
+  --black: #0f172a;
   --text-secondary: #696f79;
 }
 
@@ -29,6 +31,10 @@
 
 .text-white {
   color: var(--white);
+}
+
+.text-blue {
+  color: var(--primary);
 }
 
 .blue {
@@ -69,6 +75,10 @@
   font-size: 14px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -82,7 +92,7 @@
 }
 
 .font-light {
-  font-weight: 500;
+  font-weight: 300;
 }
 
 /* Reset styles */
@@ -96,4 +106,134 @@
 a {
   text-decoration: none;
 }
+
+button {
+  cursor: pointer;
+}
 /* Reset Styles */
+
+/* Navbar */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 0.5px solid var(--black);
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.header-2 {
+  border: none;
+}
+
+ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+a {
+  color: var(--black);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  background-color: var(--white);
+  color: var(--primary);
+  padding: 10px 30px;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-active {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 10px 30px;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* Navbar */
+
+/* Footer */
+
+footer {
+  padding: 20px;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  width: 300px;
+  line-height: 30px;
+}
+
+.footer-explore {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.explore-list {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-sponsor {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  gap: 30px;
+}
+
+.sponsor-list {
+  flex-direction: column;
+}
+
+.footer-socialmedia {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  gap: 30px;
+}
+
+.socialmedia-list {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.socialmedia-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+footer h5 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Footer */
