@@ -8,6 +8,7 @@
   --black: #0f172a;
   --green: #008000;
   --pink: #f589d7;
+  --red: #d00707;
   --text-secondary: #696f79;
   --seat-primary-color: #d6d8e7;
   --seat-secondary-color: #6e7191;
@@ -41,6 +42,10 @@
   color: var(--primary);
 }
 
+.text-red {
+  color: var(--red);
+}
+
 .blue {
   background-color: var(--primary);
 }
@@ -51,6 +56,10 @@
 
 .gray {
   background-color: var(--secondary);
+}
+
+.red {
+  background-color: var(--red);
 }
 
 .pink {
