@@ -6,7 +6,11 @@
   --blue-secondary: #1d4ed833;
   --white: #ffffff;
   --black: #0f172a;
+  --green: #008000;
+  --pink: #f589d7;
   --text-secondary: #696f79;
+  --seat-primary-color: #d6d8e7;
+  --seat-secondary-color: #6e7191;
 }
 
 .primary {
@@ -41,8 +45,16 @@
   background-color: var(--primary);
 }
 
+.green {
+  background-color: var(--green);
+}
+
 .gray {
   background-color: var(--secondary);
+}
+
+.pink {
+  background-color: var(--pink);
 }
 
 /* Font Size */
@@ -112,6 +124,19 @@ button {
 }
 /* Reset Styles */
 
+/* Container body */
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  /* margin-top: 20px; */
+  padding-top: 20px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 /* Navbar */
 
 header {
@@ -175,7 +200,8 @@ a:hover {
 /* Footer */
 
 footer {
-  padding: 20px;
+  padding: 30px;
+  padding-top: 100px;
   max-width: 1366px;
   margin: 0 auto;
 }
@@ -245,9 +271,62 @@ footer h5 {
 }
 
 .tags {
-  padding: 10px;
+  padding: 10px 30px;
   font-weight: 100;
   border-radius: 20px;
   background-color: var(--tertiary);
   color: var(--text-secondary);
 }
+
+/* Movies Tag */
+
+/* Circle Progress */
+
+.signup-step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper-step {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.wrapper-line {
+  display: flex;
+  gap: 10px;
+}
+
+.short-line {
+  width: 10px;
+  height: 1px;
+  background-color: var(--secondary);
+}
+
+.long-line {
+  width: 20px;
+  height: 1px;
+  background-color: var(--secondary);
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Circle Progress */
+
+/* Circle Component */
+.circle {
+  width: 69px;
+  height: 69px;
+  border-radius: 100%;
+}
+
+/* Circle Component */
