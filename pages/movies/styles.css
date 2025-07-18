@@ -1,0 +1,224 @@
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Hero Detail Movies */
+.hero-detail-movies {
+  background: linear-gradient(rgb(0, 0, 0, 0.4)),
+    url(/assets/background/hero-spiderman.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 415px;
+}
+
+.movie-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movie-section img {
+  position: absolute;
+  bottom: 190px;
+}
+
+.movie-details {
+  padding-left: 290px;
+}
+
+.movie-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movie-about {
+  display: flex;
+  gap: 20px;
+}
+
+.movie-release-date {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movie-release-date div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.movie-directed-cast {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movie-directed-cast div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.movie-synopsis {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movie-synopsis p {
+  line-height: 1.7;
+}
+
+/* Hero Detail Movies */
+
+/* Book Tickets */
+
+.books-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.choose-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.choose-container button {
+  width: 200px;
+  height: 50px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  background-color: var(--primary);
+}
+
+.choose {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-component {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-component img:first-child {
+  position: absolute;
+  left: 10px;
+}
+
+.input-component img:last-child {
+  position: absolute;
+  right: 10px;
+}
+
+.input-component input {
+  padding: 15px;
+  width: 250px;
+  padding-left: 50px;
+  background-color: #eff0f6;
+  border: none;
+  border-radius: 6px;
+}
+
+.choose-cinema {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.choose-cinema-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.choose-cinema-location {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.choose-cinema-location button {
+  background-color: transparent;
+}
+
+.choose-cinema-location button:nth-child(2) {
+  background-color: var(--primary);
+}
+
+.cinema-box:hover {
+  background-color: var(--primary);
+}
+
+.cinema-box:hover img {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.hiflix-cinema {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.cinema-box {
+  text-align: center;
+  place-content: center;
+  width: 250px;
+  height: 150px;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+}
+
+.next-page {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.next-page button {
+  padding: 10px;
+  width: 40px;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  background-color: transparent;
+  color: var(--black);
+}
+
+.next-page button:first-child {
+  border-radius: 6px;
+  background-color: var(--primary);
+  color: var(--white);
+}
+.next-page button:hover {
+  border-radius: 6px;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.book-now {
+  display: flex;
+  justify-content: center;
+}
+
+.book-now button {
+  padding: 20px;
+  width: 200px;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+}
+
+/* Book Tickets */
