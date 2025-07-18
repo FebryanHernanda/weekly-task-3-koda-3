@@ -237,3 +237,17 @@ footer h5 {
 }
 
 /* Footer */
+
+/* Movies tag */
+.tags-movies {
+  display: flex;
+  gap: 20px;
+}
+
+.tags {
+  padding: 10px;
+  font-weight: 100;
+  border-radius: 20px;
+  background-color: var(--tertiary);
+  color: var(--text-secondary);
+}
