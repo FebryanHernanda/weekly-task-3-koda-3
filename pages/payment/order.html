@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tickitz Ticketing Website" />
+    <title>Tickitz - Landing</title>
+    <link rel="stylesheet" href="/pages/global.css" />
+    <link rel="stylesheet" href="/pages/payment/styles.css" />
+  </head>
+  <body>
+    <header class="header-2">
+      <img src="/assets/icon/tickitz-logo-blue.svg" alt="Tickitz Logo" />
+      <nav>
+        <ul>
+          <a href="/pages/landing/landing.html"> <li>Home</li> </a>
+          <a href="/pages/landing/listmovies.html"> <li>Movie</li> </a>
+          <a href="#"><li>Buy Ticket</li></a>
+        </ul>
+      </nav>
+
+      <div class="button-group">
+        <a href="/pages/auth/login.html">
+          <button class="button text-small">Sign In</button>
+        </a>
+        <a href="/pages/auth/signup.html">
+          <button class="button-active text-small">Sign Up</button>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <!-- payment progress Step -->
+        <section class="payment-progress-section">
+          <div class="signup-step">
+            <div class="wrapper-step">
+              <div class="circle green center text-medium text-tertiary">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p>Dates And Time</p>
+            </div>
+
+            <!-- Line -->
+            <div class="wrapper-line">
+              <div class="short-line"></div>
+              <div class="long-line"></div>
+              <div class="long-line"></div>
+              <div class="long-line"></div>
+              <div class="short-line"></div>
+            </div>
+            <!-- Line -->
+
+            <div class="wrapper-step">
+              <div class="circle blue center text-medium text-tertiary">2</div>
+              <p class="text-secondary">Seat</p>
+            </div>
+
+            <!-- Line -->
+            <div class="wrapper-line">
+              <div class="short-line"></div>
+              <div class="long-line"></div>
+              <div class="long-line"></div>
+              <div class="long-line"></div>
+              <div class="short-line"></div>
+            </div>
+            <!-- Line -->
+
+            <div class="wrapper-step">
+              <div class="circle gray center text-medium text-tertiary">3</div>
+              <p class="text-secondary">Payment</p>
+            </div>
+          </div>
+        </section>
+        <!-- payment progress -->
+
+        <div class="content">
+          <!-- Book Seat Section -->
+          <section class="book-seat-section">
+            <!-- Card Movies -->
+            <div class="card-movies-payment">
+              <div class="card-movies-image">
+                <img
+                  src="/assets/background/exciting-movies/spiderman.svg"
+                  alt="Movies Posters"
+                />
+              </div>
+              <div class="card-movies-desc">
+                <div class="card-movies-content">
+                  <h3 class="text-large font-regular">
+                    Spider-Man: Homecoming
+                  </h3>
+                  <div class="tags-movies">
+                    <span class="tags">Action</span>
+                    <span class="tags">Sci-Fi</span>
+                  </div>
+                  <div class="card-movies-bottom">
+                    <h4 class="text-medium font-regular">Regular - 13:00 PM</h4>
+                    <a href="#">
+                      <button class="text-white blue">Change</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card Movies -->
+
+            <h1 class="font-regular">Choose Your Seat</h1>
+
+            <!-- Choose Seat -->
+            <div class="choose-seat">
+              <h5 class="font-light text-medium">Screen</h5>
+              <div class="screen"></div>
+              <!-- Seat -->
+              <div class="seat-location">
+                <div class="grid">
+                  <!-- A label -->
+                  <div class="cell">A</div>
+                  <button class="cell seat-available" value="A1"></button>
+                  <button class="cell seat-available" value="A2"></button>
+                  <button class="cell seat-available" value="A3"></button>
+                  <button class="cell seat-available" value="A4"></button>
+                  <button class="cell seat-available" value="A5"></button>
+                  <button class="cell seat-sold" value="A6"></button>
+                  <button class="cell seat-available" value="A7"></button>
+                  <!-- B label -->
+                  <div class="cell">B</div>
+                  <button class="cell seat-available" value="B1"></button>
+                  <button class="cell seat-sold" value="B2"></button>
+                  <button class="cell seat-sold" value="B3"></button>
+                  <button class="cell seat-available" value="B4"></button>
+                  <button class="cell seat-available" value="B5"></button>
+                  <button class="cell seat-available" value="B6"></button>
+                  <button class="cell seat-available" value="B7"></button>
+                  <!-- C label -->
+                  <div class="cell">C</div>
+                  <button class="cell seat-available" value="C1"></button>
+                  <button class="cell seat-available" value="C2"></button>
+                  <button class="cell seat-available" value="C3"></button>
+                  <button class="cell blue" value="C4"></button>
+                  <button class="cell blue" value="C5"></button>
+                  <button class="cell blue" value="C6"></button>
+                  <button class="cell seat-available" value="C7"></button>
+                  <!-- D label -->
+                  <div class="cell">D</div>
+                  <button class="cell seat-available" value="D1"></button>
+                  <button class="cell seat-sold" value="D2"></button>
+                  <button class="cell seat-available" value="D3"></button>
+                  <button class="cell seat-available" value="D4"></button>
+                  <button class="cell seat-available" value="D5"></button>
+                  <button class="cell seat-available" value="D6"></button>
+                  <button class="cell seat-available" value="D7"></button>
+                  <!-- D label -->
+                  <div class="cell">E</div>
+                  <button class="cell seat-available" value="E1"></button>
+                  <button class="cell seat-available" value="E2"></button>
+                  <button class="cell seat-available" value="E3"></button>
+                  <button class="cell seat-sold" value="E4"></button>
+                  <button class="cell seat-available" value="E5"></button>
+                  <button class="cell seat-available" value="E6"></button>
+                  <button class="cell seat-available" value="E7"></button>
+                  <!-- F label -->
+                  <div class="cell">F</div>
+                  <button class="cell seat-available" value="F1"></button>
+                  <button class="cell seat-available" value="F2"></button>
+                  <button class="cell seat-available" value="F3"></button>
+                  <button class="cell seat-available" value="F4"></button>
+                  <button class="cell seat-available" value="F5"></button>
+                  <button class="cell seat-available" value="F6"></button>
+                  <button class="cell seat-available" value="F7"></button>
+                  <!-- E label -->
+                  <div class="cell">G</div>
+                  <button class="cell seat-available" value="G1"></button>
+                  <button class="cell seat-available" value="G2"></button>
+                  <button class="cell seat-sold" value="G3"></button>
+                  <button class="cell seat-available" value="G4"></button>
+                  <button class="cell seat-available" value="G5"></button>
+                  <button class="cell seat-available" value="G6"></button>
+                  <button class="cell seat-available" value="G7"></button>
+
+                  <div class="col-label cell">1</div>
+                  <div class="cell">2</div>
+                  <div class="cell">3</div>
+                  <div class="cell">4</div>
+                  <div class="cell">5</div>
+                  <div class="cell">6</div>
+                  <div class="cell">7</div>
+                </div>
+                <!-- Screen 2 -->
+                <div class="grid">
+                  <!-- A label -->
+                  <button class="cell seat-available" value="A8"></button>
+                  <button class="cell seat-available" value="A9"></button>
+                  <button class="cell seat-available" value="A10"></button>
+                  <button class="cell seat-available" value="A11"></button>
+                  <button class="cell seat-sold" value="A12"></button>
+                  <button class="cell seat-available" value="A13"></button>
+                  <button class="cell seat-available" value="A14"></button>
+                  <div class="cell"></div>
+                  <!-- B label -->
+                  <button class="cell seat-available" value="B8"></button>
+                  <button class="cell seat-available" value="B9"></button>
+                  <button class="cell seat-available" value="B10"></button>
+                  <button class="cell seat-available" value="B11"></button>
+                  <button class="cell seat-available" value="B12"></button>
+                  <button class="cell seat-available" value="B13"></button>
+                  <button class="cell seat-available" value="B14"></button>
+                  <div class="cell"></div>
+                  <!-- C label -->
+                  <button class="cell seat-available" value="C8"></button>
+                  <button class="cell seat-sold" value="C9"></button>
+                  <button class="cell seat-available" value="C10"></button>
+                  <button class="cell seat-available" value="C11"></button>
+                  <button class="cell seat-sold" value="C12"></button>
+                  <button class="cell seat-available" value="C13"></button>
+                  <button class="cell seat-available" value="C14"></button>
+                  <div class="cell"></div>
+                  <!-- D label -->
+                  <button class="cell seat-available" value="D8"></button>
+                  <button class="cell seat-sold" value="D9"></button>
+                  <button class="cell seat-available" value="D10"></button>
+                  <button class="cell seat-available" value="D11"></button>
+                  <button class="cell seat-sold" value="D12"></button>
+                  <button class="cell seat-available" value="D13"></button>
+                  <button class="cell seat-available" value="D14"></button>
+                  <div class="cell"></div>
+                  <!-- D label -->
+                  <button class="cell seat-available" value="E8"></button>
+                  <button class="cell seat-available" value="E9"></button>
+                  <button class="cell seat-available" value="E10"></button>
+                  <button class="cell seat-available" value="E11"></button>
+                  <button class="cell seat-available" value="E12"></button>
+                  <button class="cell seat-available" value="E13"></button>
+                  <button class="cell seat-available" value="E14"></button>
+                  <div class="cell"></div>
+                  <!-- F label -->
+                  <button class="cell seat-available" value="F8"></button>
+                  <button class="cell seat-available" value="F9"></button>
+                  <button class="cell seat-couple" value="F10&F11"></button>
+                  <!-- <button class="cell seat-available" value="F11"></button> -->
+                  <button class="cell seat-available" value="F12"></button>
+                  <button class="cell seat-sold" value="F13"></button>
+                  <button class="cell seat-available" value="F14"></button>
+                  <div class="cell col-label-1"></div>
+                  <!-- E label -->
+                  <button class="cell seat-available" value="G8"></button>
+                  <button class="cell seat-available" value="G9"></button>
+                  <button class="cell seat-available" value="G10"></button>
+                  <button class="cell seat-available" value="G11"></button>
+                  <button class="cell seat-available" value="G12"></button>
+                  <button class="cell seat-available" value="G13"></button>
+                  <button class="cell seat-available" value="G14"></button>
+                  <div class="cell"></div>
+
+                  <div class="cell">8</div>
+                  <div class="cell">9</div>
+                  <div class="cell">10</div>
+                  <div class="cell">11</div>
+                  <div class="cell">12</div>
+                  <div class="cell">13</div>
+                  <div class="cell">14</div>
+                </div>
+              </div>
+              <!-- Seat -->
+            </div>
+            <!-- Choose Seat -->
+
+            <!-- Reference Seat -->
+            <div class="seat-reference">
+              <h3 class="font-regular">Seating Key</h3>
+              <div class="seat-reference-body">
+                <h4 class="font-regular text-secondary">Available</h4>
+                <div class="wrapper">
+                  <div class="shape blue"></div>
+                  <h4 class="font-regular text-secondary">Selected</h4>
+                </div>
+
+                <div class="wrapper">
+                  <div class="shape pink"></div>
+                  <h4 class="font-regular text-secondary">Love nest</h4>
+                </div>
+
+                <div class="wrapper">
+                  <div class="shape gray"></div>
+                  <h4 class="font-regular text-secondary">Sold</h4>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Book Seat Section -->
+          <section class="details-section">
+            <div class="details-content">
+              <div class="details-payment">
+                <div>
+                  <img
+                    src="/assets/icon/sponsor/CineOne-logo.svg"
+                    alt="CineOne21 Logo"
+                  />
+                  <h1 class="font-regular title-extra-small">
+                    CineOne21 Cinema
+                  </h1>
+                </div>
+                <div class="wrapper">
+                  <h3 class="text-secondary font-regular">Movie selected</h3>
+                  <h3 class="font-regular">Spider-Man: Homecoming</h3>
+                </div>
+                <div class="wrapper">
+                  <h3 class="text-secondary font-regular">
+                    Tuesday, 07 July 2020
+                  </h3>
+                  <h3 class="font-regular">13:00 PM</h3>
+                </div>
+                <div class="wrapper">
+                  <h3 class="text-secondary font-regular">One ticket price</h3>
+                  <h3 class="font-regular">$10</h3>
+                </div>
+                <div class="wrapper">
+                  <h3 class="text-secondary font-regular">Seat choosed</h3>
+                  <h3 class="font-regular">C4, C5, C6</h3>
+                </div>
+              </div>
+              <div class="line-split"></div>
+              <div class="total-payment">
+                <h2 class="font-regular">Total Payment</h2>
+                <h2 class="text-blue">$30</h2>
+              </div>
+            </div>
+            <a href="#">
+              <button><h1 class="font-regular">Checkout now</h1></button>
+            </a>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-list">
+        <div class="footer-logo">
+          <img src="/assets/icon/tickitz-logo-blue.svg" alt="Tickitz Logo" />
+          <p class="font-light text-small">
+            Stop waiting in line. Buy tickets conveniently, watch movies
+            quietly.
+          </p>
+        </div>
+
+        <div class="footer-explore">
+          <h3>Explore</h3>
+          <ul class="explore-list">
+            <a href="#"> <li>Cinemas</li> </a>
+            <a href="#"> <li>Movies List</li> </a>
+            <a href="#"><li>My Ticket</li></a>
+            <a href="#"><li>Notifications</li></a>
+          </ul>
+        </div>
+
+        <div class="footer-sponsor">
+          <h3>Our Sponsor</h3>
+          <ul class="sponsor-list">
+            <li>
+              <img
+                src="/assets//icon/sponsor/ebv-logo.svg"
+                alt="EBV Sponsor Logo"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets//icon/sponsor/CineOne-logo.svg"
+                alt="CineOne Sponsor Logo"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets//icon/sponsor/hiflix-logo.svg"
+                alt="hiflix Sponsor Logo"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-socialmedia">
+          <h3>Follow Us</h3>
+          <ul class="socialmedia-list">
+            <li>
+              <img
+                src="/assets//icon/socialmedia/facebook-icon.svg"
+                alt="Facebook Logo"
+              />
+              <a href="#">Tickitz Cinema id</a>
+            </li>
+            <li>
+              <img
+                src="/assets//icon/socialmedia/instagram-icon.svg"
+                alt="Instagram Logo"
+              />
+              <a href="#">tickitz.id</a>
+            </li>
+            <li>
+              <img
+                src="/assets//icon/socialmedia/twitter-icon.svg"
+                alt="twitter Logo"
+              />
+              <a href="#">tickitz.id</a>
+            </li>
+            <li>
+              <img
+                src="/assets//icon/socialmedia/youtube-icon.svg"
+                alt="Youtube Logo"
+              />
+              <a href="#">Tickitz Cinema id</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h5 class="text-medium font-regular">
+        © 2020 Tickitz. All Rights Reserved.
+      </h5>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/21b38282b1.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

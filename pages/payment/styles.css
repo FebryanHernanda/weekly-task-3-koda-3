@@ -1,0 +1,219 @@
+main {
+  background-color: var(--tertiary);
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+}
+
+/* payment progress */
+.payment-progress-section {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* Book Seat Section */
+.book-seat-section {
+  background-color: var(--white);
+  flex-grow: 1;
+  padding: 50px;
+  /* max-width: 732px; */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 8px;
+}
+
+/* Card Movies Payment */
+.card-movies-payment {
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.card-movies-image {
+  width: 300px;
+  height: 150px;
+}
+
+.card-movies-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+.card-movies-desc {
+  width: 100%;
+}
+
+.card-movies-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-movies-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-movies-bottom a button {
+  font-size: 14px;
+  font-weight: 200;
+  padding: 10px;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Seating Key Reference */
+
+.seat-reference {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.shape {
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.seat-reference-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+/* Seating Key Reference */
+
+/* Choose Seat */
+.choose-seat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.screen {
+  width: 76%;
+  height: 8px;
+  border-radius: 4px;
+  /* background-color: #fcfdfe; */
+  background-color: gray;
+}
+
+.seat-location {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 26px);
+  grid-template-rows: repeat(7, 26px);
+  gap: 10px;
+  color: var(--text-secondary);
+}
+
+.cell {
+  border-radius: 5px;
+  text-align: center;
+  place-content: center;
+}
+
+.col-label {
+  grid-column-start: 2;
+}
+
+.grid button {
+  border: none;
+}
+
+.grid button:hover:not(.seat-sold) {
+  background-color: var(--primary);
+}
+
+.seat-available {
+  background-color: var(--seat-primary-color);
+}
+
+.seat-sold {
+  background-color: var(--seat-secondary-color);
+}
+
+.seat-couple {
+  background-color: var(--pink);
+  grid-column: 3 / 5;
+  pointer-events: none;
+}
+
+/* Choose Seat */
+
+/* Details Section */
+
+.details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.details-section button {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.details-content {
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+.details-payment {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.details-payment div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.total-payment {
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.line-split {
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--seat-secondary-color);
+}
+
+/* Details Section */
