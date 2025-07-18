@@ -18,9 +18,8 @@ main {
 /* Book Seat Section */
 .book-seat-section {
   background-color: var(--white);
-  flex-grow: 1;
+  /* flex-grow: 1; */
   padding: 50px;
-  /* max-width: 732px; */
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -217,3 +216,114 @@ main {
 }
 
 /* Details Section */
+
+/* Payment Details Section */
+.payment-info-section {
+  display: flex;
+  justify-content: center;
+}
+.payment-container {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 50px;
+  max-width: 732px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment-info-container,
+.payment-personalinfo-container,
+.payment-method-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.payment-info-wrapper label {
+  color: var(--text-secondary);
+}
+
+.payment-info-container .payment-info-wrapper input {
+  padding: 15px 0;
+  font-size: 16px;
+}
+
+.payment-info-container .payment-info-wrapper input:disabled {
+  background-color: transparent;
+  color: black;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+#total-payment {
+  color: var(--primary);
+}
+
+.payment-personalinfo-container .payment-info-wrapper input {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+#personal-number {
+  padding-left: 65px;
+}
+
+.payment-info-wrapper span {
+  position: absolute;
+  padding: 10px;
+  left: 8px;
+  bottom: 7px;
+  border-right: 0.5px solid black;
+  color: var(--text-secondary);
+  font-weight: 200;
+}
+
+.payment-method-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.payment-method-wrapper button {
+  padding: 20px;
+  width: 20%;
+  height: 100px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background-color: transparent;
+  flex-grow: 1;
+}
+
+.payment-method-wrapper button:hover {
+  background-color: var(--primary);
+}
+
+.payment-method-wrapper button:hover .white {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.payment-form a button {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+}
