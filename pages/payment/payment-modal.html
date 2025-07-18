@@ -75,12 +75,10 @@
         </section>
         <!-- payment progress -->
 
+        <!-- Payment Info Section -->
         <section class="payment-info-section">
           <div class="payment-container">
-            <form
-              class="payment-form"
-              action="/pages/payment/payment-modal.html"
-            >
+            <form class="payment-form">
               <!-- Payment Info -->
               <div class="payment-info-container">
                 <h1 class="font-semi-bold">Payment Info</h1>
@@ -230,6 +228,40 @@
             </form>
           </div>
         </section>
+        <!-- Paymennt Info Section -->
+      </div>
+      <!-- Payment Modal -->
+      <div class="modal">
+        <div class="modal-container">
+          <div class="modal-body">
+            <h1 class="font-semi-bold">Payment Info</h1>
+            <div class="wrapper">
+              <h4 class="font-regular text-secondary">No. Rekening Virtual</h4>
+              <div class="wrapper">
+                <h3 class="font-regular">12321328913829724</h3>
+                <button>Copy</button>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h4 class="font-regular text-secondary">Total Payment</h4>
+              <h3 class="font-regular text-blue">$30</h3>
+            </div>
+            <p class="text-secondary" style="line-height: 1.5">
+              Pay this payment bill before it is due,
+              <span class="text-red">on June 23, 2023</span>. If the bill has
+              not been paid by the specified time, it will be forfeited
+            </p>
+          </div>
+          <div class="modal-button">
+            <a href="#">
+              <button>Check Payment</button>
+            </a>
+            <a href="/pages/payment/payment-details.html">
+              <button>Pay Later</button>
+            </a>
+          </div>
+        </div>
+        <!-- Payment modal -->
       </div>
     </main>
 
