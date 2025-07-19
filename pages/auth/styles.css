@@ -17,11 +17,11 @@ main {
   gap: 20px;
 }
 
-.circle {
+/* .circle {
   width: 69px;
   height: 69px;
   border-radius: 100%;
-}
+} */
 
 .forgot-password {
   width: 100%;
@@ -44,14 +44,6 @@ main {
   background-position: center;
   padding: 50px;
   min-height: 100vh;
-}
-
-.center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
 }
 
 .container {
@@ -138,7 +130,7 @@ main {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.signup-step {
+/* .signup-step {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -149,9 +141,9 @@ main {
   flex-direction: column;
   gap: 15px;
   align-items: center;
-}
+} */
 
-.wrapper-line {
+/* .wrapper-line {
   display: flex;
   gap: 10px;
 }
@@ -166,7 +158,7 @@ main {
   width: 20px;
   height: 1px;
   background-color: var(--secondary);
-}
+} */
 
 .wrapper-eye {
   display: flex;

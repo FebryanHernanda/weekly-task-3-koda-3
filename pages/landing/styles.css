@@ -46,14 +46,14 @@ body {
 }
 
 /* Contaienr After Hero */
-.container {
+/* .container {
   margin: 0 auto;
   padding: 50px 0;
   display: flex;
   flex-direction: column;
   gap: 100px;
   max-width: 1366px;
-}
+} */
 
 /* Why Choose Us */
 
@@ -159,19 +159,19 @@ body {
   cursor: pointer;
 }
 
-.button-overlay button:first-child {
+.button-overlay a button:first-child {
   border: 1px solid white;
   background-color: transparent;
   color: white;
 }
 
-.button-overlay button:hover {
+.button-overlay a button:hover {
   border: none;
   background-color: var(--primary);
   color: white;
 }
 
-.button-overlay button:last-child {
+.button-overlay a:last-child button:last-child {
   border: none;
   background-color: var(--primary);
   color: white;

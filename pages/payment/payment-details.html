@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tickitz Ticketing Website" />
+    <title>Tickitz - Landing</title>
+    <link rel="stylesheet" href="/pages/global.css" />
+    <link rel="stylesheet" href="/pages/payment/styles.css" />
+  </head>
+  <body>
+    <header class="header-2">
+      <img src="/assets/icon/tickitz-logo-blue.svg" alt="Tickitz Logo" />
+      <nav>
+        <ul>
+          <a href="/pages/landing/landing.html"> <li>Home</li> </a>
+          <a href="/pages/landing/listmovies.html"> <li>Movie</li> </a>
+          <a href="#"><li>Buy Ticket</li></a>
+        </ul>
+      </nav>
+
+      <div class="button-group">
+        <a href="/pages/auth/login.html">
+          <button class="button text-small">Sign In</button>
+        </a>
+        <a href="/pages/auth/signup.html">
+          <button class="button-active text-small">Sign Up</button>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <!-- payment progress Step -->
+        <section class="payment-progress-section">
+          <div class="signup-step">
+            <div class="wrapper-step">
+              <div class="circle green center text-medium text-tertiary">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p>Dates And Time</p>
+            </div>
+
+            <!-- Line -->
+            <div class="wrapper-line">
+              <div class="short-line"></div>
+              <div class="long-line"></div>
+              <div class="long-line"></div>
+              <div class="long-line"></div>
+              <div class="short-line"></div>
+            </div>
+            <!-- Line -->
+
+            <div class="wrapper-step">
+              <div class="circle green center text-medium text-tertiary">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text-secondary">Seat</p>
+            </div>
+
+            <!-- Line -->
+            <div class="wrapper-line">
+              <div class="short-line"></div>
+              <div class="long-line"></div>
+              <div class="long-line"></div>
+              <div class="long-line"></div>
+              <div class="short-line"></div>
+            </div>
+            <!-- Line -->
+
+            <div class="wrapper-step">
+              <div class="circle blue center text-medium text-tertiary">3</div>
+              <p class="text-secondary">Payment</p>
+            </div>
+          </div>
+        </section>
+        <!-- payment progress -->
+
+        <section class="payment-info-section">
+          <div class="payment-container">
+            <form
+              class="payment-form"
+              action="/pages/payment/payment-modal.html"
+            >
+              <!-- Payment Info -->
+              <div class="payment-info-container">
+                <h1 class="font-semi-bold">Payment Info</h1>
+                <div class="payment-info-wrapper">
+                  <label for="date-showing">DATE & TIME</label>
+                  <input
+                    type="text"
+                    name="date-showing"
+                    id="date-showing"
+                    value="Tuesday, 07 July 2020 at 02:00pm"
+                    disabled
+                  />
+                </div>
+                <div class="payment-info-wrapper">
+                  <label for="movie-title">MOVIE TITLE</label>
+                  <input
+                    type="text"
+                    name="movie-title"
+                    id="movie-title"
+                    value="Spider-Man: Homecoming"
+                    disabled
+                  />
+                </div>
+                <div class="payment-info-wrapper">
+                  <label for="cinema-name">CINEMA NAME</label>
+                  <input
+                    type="text"
+                    name="cinema-name"
+                    id="cinema-name"
+                    value="CineOne21 Cinema"
+                    disabled
+                  />
+                </div>
+                <div class="payment-info-wrapper">
+                  <label for="total-tickets">NUMBER OF TICKETS</label>
+                  <input
+                    type="text"
+                    name="total-tickets"
+                    id="total-tickets"
+                    value="3 pieces"
+                    disabled
+                  />
+                </div>
+                <div class="payment-info-wrapper">
+                  <label for="total-payment">TOTAL PAYMENT</label>
+                  <input
+                    type="text"
+                    name="total-payment"
+                    id="total-payment"
+                    value="$30,00"
+                    disabled
+                  />
+                </div>
+              </div>
+
+              <!-- Payment Personal Info -->
+              <div class="payment-personalinfo-container">
+                <h1 class="font-semi-bold">Payment Info</h1>
+                <div class="payment-info-wrapper">
+                  <label for="personal-name">Full Name</label>
+                  <input
+                    type="text"
+                    name="personal-name"
+                    id="personal-name"
+                    placeholder="Jonas El Rodriguez"
+                  />
+                </div>
+                <div class="payment-info-wrapper">
+                  <label for="personal-email">Email</label>
+                  <input
+                    type="email"
+                    name="personal-email"
+                    id="personal-email"
+                    placeholder="jonasrodri123@gmail.com"
+                  />
+                </div>
+                <div class="payment-info-wrapper">
+                  <span>+62</span>
+                  <label for="personal-number">Phone Number</label>
+                  <input
+                    type="tel"
+                    name="personal-number"
+                    id="personal-number"
+                    placeholder="81445687121"
+                  />
+                </div>
+              </div>
+              <!-- Payment Method -->
+              <div class="payment-method-container">
+                <h1 class="font-semi-bold">Payment Method</h1>
+                <div class="payment-method-wrapper">
+                  <button type="button" value="Gpay">
+                    <img
+                      src="/assets/icon/payment-method/googlepay-icon.svg"
+                      alt="Google Pay Icon"
+                      class="white"
+                    />
+                  </button>
+                  <button type="button" value="VISA">
+                    <img
+                      src="/assets/icon/payment-method/visa-icon.svg"
+                      alt="Visa Icon"
+                      class="white"
+                    />
+                  </button>
+                  <button type="button" value="Gopay">
+                    <img
+                      src="/assets/icon/payment-method/gopay-icon.svg"
+                      alt="Gopay Icon"
+                    />
+                  </button>
+                  <button type="button" value="Paypal">
+                    <img
+                      src="/assets/icon/payment-method/paypal-icon.svg"
+                      alt="Paypal Icon"
+                    />
+                  </button>
+                  <button type="button" value="Dana">
+                    <img
+                      src="/assets/icon/payment-method/dana-icon.svg"
+                      alt="Dana Icon"
+                    />
+                  </button>
+                  <button type="button" value="BCA">
+                    <img
+                      src="/assets/icon/payment-method/BCA-icon.svg"
+                      alt="BCA Icon"
+                    />
+                  </button>
+                  <button type="button" value="BRI">
+                    <img
+                      src="/assets/icon/payment-method/BRI-icon.svg"
+                      alt="BRI Icon"
+                      class="white"
+                    />
+                  </button>
+                  <button type="button" value="OVO">
+                    <img
+                      src="/assets/icon/payment-method/ovo-icon.svg"
+                      alt="BRI Icon"
+                      class="white"
+                    />
+                  </button>
+                </div>
+              </div>
+              <button type="submit">Pay your order</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-list">
+        <div class="footer-logo">
+          <img src="/assets/icon/tickitz-logo-blue.svg" alt="Tickitz Logo" />
+          <p class="font-light text-small">
+            Stop waiting in line. Buy tickets conveniently, watch movies
+            quietly.
+          </p>
+        </div>
+
+        <div class="footer-explore">
+          <h3>Explore</h3>
+          <ul class="explore-list">
+            <a href="#"> <li>Cinemas</li> </a>
+            <a href="#"> <li>Movies List</li> </a>
+            <a href="#"><li>My Ticket</li></a>
+            <a href="#"><li>Notifications</li></a>
+          </ul>
+        </div>
+
+        <div class="footer-sponsor">
+          <h3>Our Sponsor</h3>
+          <ul class="sponsor-list">
+            <li>
+              <img
+                src="/assets//icon/sponsor/ebv-logo.svg"
+                alt="EBV Sponsor Logo"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets//icon/sponsor/CineOne-logo.svg"
+                alt="CineOne Sponsor Logo"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets//icon/sponsor/hiflix-logo.svg"
+                alt="hiflix Sponsor Logo"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-socialmedia">
+          <h3>Follow Us</h3>
+          <ul class="socialmedia-list">
+            <li>
+              <img
+                src="/assets//icon/socialmedia/facebook-icon.svg"
+                alt="Facebook Logo"
+              />
+              <a href="#">Tickitz Cinema id</a>
+            </li>
+            <li>
+              <img
+                src="/assets//icon/socialmedia/instagram-icon.svg"
+                alt="Instagram Logo"
+              />
+              <a href="#">tickitz.id</a>
+            </li>
+            <li>
+              <img
+                src="/assets//icon/socialmedia/twitter-icon.svg"
+                alt="twitter Logo"
+              />
+              <a href="#">tickitz.id</a>
+            </li>
+            <li>
+              <img
+                src="/assets//icon/socialmedia/youtube-icon.svg"
+                alt="Youtube Logo"
+              />
+              <a href="#">Tickitz Cinema id</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h5 class="text-medium font-regular">
+        © 2020 Tickitz. All Rights Reserved.
+      </h5>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/21b38282b1.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

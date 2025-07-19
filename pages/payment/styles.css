@@ -1,0 +1,546 @@
+main {
+  background-color: var(--tertiary);
+  /* padding: 20px; */
+  /* min-height: 100vh; */
+  position: relative;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+}
+
+/* payment progress */
+.payment-progress-section {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* Book Seat Section */
+.book-seat-section {
+  background-color: var(--white);
+  /* flex-grow: 1; */
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 8px;
+}
+
+/* Card Movies Payment */
+.card-movies-payment {
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.card-movies-image {
+  width: 300px;
+  height: 150px;
+}
+
+.card-movies-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+.card-movies-desc {
+  width: 100%;
+}
+
+.card-movies-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-movies-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-movies-bottom a button {
+  font-size: 14px;
+  font-weight: 200;
+  padding: 10px;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Seating Key Reference */
+
+.seat-reference {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.shape {
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.seat-reference-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+/* Seating Key Reference */
+
+/* Choose Seat */
+.choose-seat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.screen {
+  width: 76%;
+  height: 8px;
+  border-radius: 4px;
+  /* background-color: #fcfdfe; */
+  background-color: gray;
+}
+
+.seat-location {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 26px);
+  grid-template-rows: repeat(7, 26px);
+  gap: 10px;
+  color: var(--text-secondary);
+}
+
+.cell {
+  border-radius: 5px;
+  text-align: center;
+  place-content: center;
+}
+
+.col-label {
+  grid-column-start: 2;
+}
+
+.grid button {
+  border: none;
+}
+
+.grid button:hover:not(.seat-sold) {
+  background-color: var(--primary);
+}
+
+.seat-available {
+  background-color: var(--seat-primary-color);
+}
+
+.seat-sold {
+  background-color: var(--seat-secondary-color);
+}
+
+.seat-couple {
+  background-color: var(--pink);
+  grid-column: 3 / 5;
+  pointer-events: none;
+}
+
+/* Choose Seat */
+
+/* Details Section */
+
+.details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.details-section button {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.details-content {
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+.details-payment {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.details-payment div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.total-payment {
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.line-split {
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--seat-secondary-color);
+}
+
+/* Details Section */
+
+/* Payment Details Section */
+.payment-info-section {
+  display: flex;
+  justify-content: center;
+}
+.payment-container {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 50px;
+  max-width: 732px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment-info-container,
+.payment-personalinfo-container,
+.payment-method-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.payment-info-wrapper label {
+  color: var(--text-secondary);
+}
+
+.payment-info-container .payment-info-wrapper input {
+  padding: 15px 0;
+  font-size: 16px;
+}
+
+.payment-info-container .payment-info-wrapper input:disabled {
+  background-color: transparent;
+  color: black;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+#total-payment {
+  color: var(--primary);
+}
+
+.payment-personalinfo-container .payment-info-wrapper input {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+#personal-number {
+  padding-left: 65px;
+}
+
+.payment-info-wrapper span {
+  position: absolute;
+  padding: 10px;
+  left: 8px;
+  bottom: 7px;
+  border-right: 0.5px solid black;
+  color: var(--text-secondary);
+  font-weight: 200;
+}
+
+.payment-method-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.payment-method-wrapper button {
+  padding: 20px;
+  width: 20%;
+  height: 100px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background-color: transparent;
+  flex-grow: 1;
+}
+
+.payment-method-wrapper button:hover {
+  background-color: var(--primary);
+}
+
+.payment-method-wrapper button:hover .white {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.payment-form button[type="submit"] {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Modal Dialog */
+
+.modal {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  background-color: var(--white);
+  padding: 50px 30px;
+  /* margin: 450px auto; */
+  max-width: 25%;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-body button {
+  padding: 10px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.modal-body button:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.modal-button {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-button a:first-child button {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--primary);
+  color: var(--white);
+  border-radius: 4px;
+  background-color: var(--primary);
+}
+
+.modal-button a:last-child button {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: var(--primary);
+  background-color: transparent;
+}
+
+.modal-button a:last-child button:hover {
+  background-color: var(--tertiary);
+}
+
+/* Ticket Results */
+
+.wrapper-ticket {
+  display: flex;
+}
+
+.purchasing-info-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7)),
+    url(/assets/background/background.png);
+  background-position: center;
+  max-width: 80%;
+  padding: 100px;
+}
+
+.purchasing-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 800px;
+}
+
+.purchasing-info-container img {
+  width: 50%;
+}
+
+.ticket-results-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+}
+
+.ticket-container {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 280px;
+  padding: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ticket-container img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.ticket-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper-download-ticket {
+  display: flex;
+  gap: 20px;
+}
+
+.ticket-details-left,
+.ticket-details-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ticket-total-payment {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--tertiary);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.line-ticket {
+  position: relative;
+  width: 365px;
+  right: 43px;
+  bottom: 9px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.line-ticket hr {
+  flex: 1;
+  border: 1px dashed var(--tertiary);
+}
+
+.line-ticket .circle {
+  width: 30px;
+  height: 30px;
+  background-color: var(--tertiary);
+}
+
+.ticket-download {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 380px;
+  position: relative;
+}
+
+.ticket-download button {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--primary);
+  color: var(--white);
+  border-radius: 4px;
+  background-color: var(--primary);
+}
+
+.ticket-download .wrapper img {
+  width: 20px;
+  position: absolute;
+  left: 100px;
+}
+
+.ticket-download .wrapper button {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background-color: transparent;
+}
+
+.ticket-download button:hover {
+  border: 1px solid var(--primary);
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+.ticket-download .wrapper button:hover img {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+/* Ticket Results */
