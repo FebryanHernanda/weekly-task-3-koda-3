@@ -1,7 +1,7 @@
 main {
   background-color: var(--tertiary);
-  padding: 20px;
-  min-height: 100vh;
+  /* padding: 20px; */
+  /* min-height: 100vh; */
   position: relative;
 }
 
@@ -405,3 +405,142 @@ main {
 .modal-button a:last-child button:hover {
   background-color: var(--tertiary);
 }
+
+/* Ticket Results */
+
+.wrapper-ticket {
+  display: flex;
+}
+
+.purchasing-info-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7)),
+    url(/assets/background/background.png);
+  background-position: center;
+  max-width: 80%;
+  padding: 100px;
+}
+
+.purchasing-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 800px;
+}
+
+.purchasing-info-container img {
+  width: 50%;
+}
+
+.ticket-results-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+}
+
+.ticket-container {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 280px;
+  padding: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ticket-container img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.ticket-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper-download-ticket {
+  display: flex;
+  gap: 20px;
+}
+
+.ticket-details-left,
+.ticket-details-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ticket-total-payment {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--tertiary);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.line-ticket {
+  position: relative;
+  width: 365px;
+  right: 43px;
+  bottom: 9px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.line-ticket hr {
+  flex: 1;
+  border: 1px dashed var(--tertiary);
+}
+
+.line-ticket .circle {
+  width: 30px;
+  height: 30px;
+  background-color: var(--tertiary);
+}
+
+.ticket-download {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 380px;
+  position: relative;
+}
+
+.ticket-download button {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--primary);
+  color: var(--white);
+  border-radius: 4px;
+  background-color: var(--primary);
+}
+
+.ticket-download .wrapper img {
+  width: 20px;
+  position: absolute;
+  left: 100px;
+}
+
+.ticket-download .wrapper button {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background-color: transparent;
+}
+
+.ticket-download button:hover {
+  border: 1px solid var(--primary);
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+.ticket-download .wrapper button:hover img {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+/* Ticket Results */
