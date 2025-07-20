@@ -58,6 +58,10 @@
   background-color: var(--secondary);
 }
 
+.seat-available {
+  background-color: var(--seat-primary-color);
+}
+
 .red {
   background-color: var(--red);
 }
@@ -131,6 +135,7 @@ a {
 button {
   cursor: pointer;
 }
+
 /* Reset Styles */
 
 /* Container body */
@@ -138,11 +143,11 @@ button {
 .container {
   max-width: 1366px;
   margin: 0 auto;
-  /* margin-top: 20px; */
   padding-top: 20px;
   padding-bottom: 80px;
   display: flex;
   flex-direction: column;
+  padding: 0 3rem;
   gap: 50px;
 }
 
@@ -152,7 +157,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 20px 2rem;
   border-bottom: 0.5px solid var(--black);
   max-width: 1366px;
   margin: 0 auto;
@@ -204,13 +209,43 @@ a:hover {
   color: var(--white);
 }
 
+.avatar-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar-nav div {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.avatar-nav .profile-avatar {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+}
+
+.menu-bars {
+  display: none;
+  background: none;
+  border: none;
+  /* padding: 0 20px; */
+}
+
+.menu-bars img {
+  width: 35px;
+}
+
 /* Navbar */
 
 /* Footer */
 
 footer {
-  padding: 30px;
+  padding: 0 3rem;
   padding-top: 100px;
+  padding-bottom: 20px;
   max-width: 1366px;
   margin: 0 auto;
 }
@@ -286,7 +321,6 @@ footer h5 {
   background-color: var(--tertiary);
   color: var(--text-secondary);
 }
-
 /* Movies Tag */
 
 /* Circle Progress */
@@ -295,6 +329,7 @@ footer h5 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .wrapper-step {
@@ -339,3 +374,86 @@ footer h5 {
 }
 
 /* Circle Component */
+
+.jumbotron {
+  width: 100%;
+}
+
+/* Breakpoints */
+
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 30px;
+  }
+
+  .container {
+    padding: 20px 50px;
+  }
+
+  footer {
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-bars {
+    display: block;
+  }
+
+  nav ul,
+  .avatar-nav,
+  .button-group {
+    display: none;
+  }
+
+  .footer-list {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-logo img {
+    width: 200px;
+  }
+
+  .footer-explore,
+  .footer-socialmedia {
+    gap: 10px;
+  }
+
+  .footer-sponsor {
+    gap: 20px;
+  }
+
+  .explore-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sponsor-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .socialmedia-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    padding: 20px 50px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 20px 30px;
+  }
+
+  .signup-step {
+    display: none;
+  }
+}
+
+/* Breakpoints */
