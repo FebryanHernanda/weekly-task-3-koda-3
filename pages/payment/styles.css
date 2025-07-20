@@ -103,6 +103,7 @@ main {
   justify-content: center;
   gap: 50px;
 }
+
 /* Seating Key Reference */
 
 /* Choose Seat */
@@ -641,13 +642,13 @@ main {
 
   .modal-container {
     width: fit-content;
-    padding: 10px;
+    padding: 20px;
   }
 
   .book-seat-section {
     height: fit-content;
     width: 0;
-    padding: 20px;
+    padding: 40px Im !important;
   }
 
   .card-movies-payment {
@@ -667,6 +668,11 @@ main {
   .seat-reference-body {
     flex-wrap: wrap;
     gap: 20px;
+  }
+
+  .seat-reference-body .wrapper {
+    width: 150px;
+    justify-content: unset;
   }
 
   .payment-method-wrapper button img {
