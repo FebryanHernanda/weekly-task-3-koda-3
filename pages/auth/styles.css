@@ -130,7 +130,7 @@ main {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-/* .signup-step {
+.signup-step {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -141,24 +141,12 @@ main {
   flex-direction: column;
   gap: 15px;
   align-items: center;
-} */
-
-/* .wrapper-line {
-  display: flex;
-  gap: 10px;
 }
 
-.short-line {
-  width: 10px;
-  height: 1px;
-  background-color: var(--secondary);
+.wrapper-step .circle {
+  width: 50px;
+  height: 50px;
 }
-
-.long-line {
-  width: 20px;
-  height: 1px;
-  background-color: var(--secondary);
-} */
 
 .wrapper-eye {
   display: flex;
