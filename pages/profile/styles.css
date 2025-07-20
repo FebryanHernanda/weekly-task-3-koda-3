@@ -117,7 +117,6 @@ hr {
 }
 
 .ornament img:first-child {
-  /* width: 200px; */
   position: relative;
   right: -250px;
   top: -70px;
@@ -135,6 +134,7 @@ hr {
   right: -50px;
   top: -80px;
 }
+
 /* Card */
 
 /* Loyalty Slider */
@@ -175,6 +175,7 @@ form {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  gap: 20px;
 }
 
 nav {
@@ -425,3 +426,162 @@ nav {
   place-content: center;
 }
 /* Ticket information Paid */
+
+/* Breakpoints */
+
+@media (max-width: 1024px) {
+  .container-1 {
+    padding: 20px 50px;
+  }
+
+  .profile-wrapper {
+    flex-wrap: wrap;
+    height: 100%;
+  }
+
+  .profile-section {
+    width: 100%;
+  }
+
+  .profile-card {
+    width: 100%;
+  }
+
+  .profile-loyalty {
+    width: 100%;
+  }
+
+  .loyalty-card {
+    padding: 60px 20px;
+  }
+
+  .loyalty-card-wrapper {
+    /* width: 100%; */
+    width: 500px;
+    align-self: center;
+  }
+
+  .ornament {
+    right: 70px;
+    top: 40px;
+  }
+
+  .card-shadow {
+    width: 100%;
+  }
+
+  .account-dashboard-section button {
+    width: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .loyalty-card-wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 640px) {
+  .container-1 {
+    padding: 20px 30px;
+  }
+
+  .account-setting-input {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .ornament {
+    right: 50px;
+    top: 60px;
+  }
+
+  .ornament img {
+    width: 30%;
+  }
+
+  .ornament img:first-child {
+    position: relative;
+    right: -225px;
+    top: -100px;
+  }
+
+  .ornament img:nth-child(2) {
+    right: -170px;
+    top: -66px;
+  }
+
+  .ornament img:last-child {
+    width: 20%;
+    right: -80px;
+    top: -85px;
+  }
+}
+
+@media (max-width: 425px) {
+  .ornament {
+    right: 20px;
+    top: 60px;
+  }
+
+  .ornament img:first-child {
+    position: relative;
+    right: -225px;
+    top: -100px;
+  }
+
+  .ornament img:nth-child(2) {
+    right: -170px;
+    top: -66px;
+  }
+
+  .ornament img:last-child {
+    width: 15%;
+    right: -80px;
+    top: -85px;
+  }
+
+  .details-movie {
+    flex-wrap: wrap-reverse;
+  }
+
+  .cinema-movie {
+    padding: 0;
+  }
+
+  .ticket-status {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .ticket-button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .split-card {
+    bottom: 180px;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+  }
+
+  .split-card-2 {
+    bottom: 480px;
+  }
+
+  .ticket-paid-information {
+    flex-wrap: wrap;
+  }
+
+  .split-card-3 {
+    bottom: 715px;
+  }
+}
+
+/* Breakpoints */

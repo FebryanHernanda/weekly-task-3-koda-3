@@ -20,8 +20,10 @@
       </nav>
 
       <div class="avatar-nav">
-        <h3 class="font-regular">Location</h3>
-        <img src="/assets/components/arrow-down.svg" alt="Arrow down icon" />
+        <div>
+          <h3 class="font-regular">Location</h3>
+          <img src="/assets/components/arrow-down.svg" alt="Arrow down icon" />
+        </div>
         <i class="fa-solid fa-magnifying-glass"></i>
         <div class="profile-avatar">
           <img
@@ -29,189 +31,199 @@
             alt="Photo Profile Avatar"
           />
         </div>
+      </div>
+
+      <button class="menu-bars">
+        <img src="/assets/components/bar-menu-icon.svg" alt="Bar Menu Icon" />
+      </button>
     </header>
     <main>
-      <div class="profile-wrapper">
-        <!-- Card section -->
-        <aside class="profile-section">
-          <!-- Profile Card -->
-          <div class="profile-card">
-            <!-- Profile COntent -->
-            <div class="profile-content">
-              <div class="wrapper">
-                <h3 class="font-regular">INFO</h3>
-                <i class="fa-solid fa-ellipsis"></i>
+      <div class="container-1">
+        <div class="profile-wrapper">
+          <!-- Card section -->
+          <aside class="profile-section">
+            <!-- Profile Card -->
+            <div class="profile-card">
+              <!-- Profile COntent -->
+              <div class="profile-content">
+                <div class="wrapper">
+                  <h3 class="font-regular">INFO</h3>
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <!-- Profile Hero -->
+                <div class="profile-hero">
+                  <div class="profile-avatar">
+                    <img
+                      src="https://img-highend.okezone.com/okz/900/pictureArticle/images_424wQl2v_iD69O9.jpg"
+                      alt="Photo Profile Avatar"
+                    />
+                  </div>
+                  <div class="profile-name">
+                    <h2 class="font-regular">Fathia Izzati</h2>
+                    <h4 class="font-regular text-secondary">Moviegoers</h4>
+                  </div>
+                </div>
+                <!-- profile Hero -->
+                <hr />
+                <!-- Profile Loyalty Seciton -->
+                <div class="profile-loyalty">
+                  <h3 class="font-regular">Loyalty Points</h3>
+                  <!-- Card -->
+                  <div class="loyalty-card-wrapper">
+                    <div class="loyalty-card">
+                      <div class="ornament">
+                        <img
+                          src="/assets/components/ellips1.svg"
+                          alt="Ellips 1 icon"
+                        />
+                        <img
+                          src="/assets/components/ellips2.svg"
+                          alt="Ellips 2 Icon"
+                        />
+                        <img
+                          src="/assets/components/star.svg"
+                          alt="Star Icon"
+                        />
+                      </div>
+                      <h1 class="text-white font-regular">Moviegoers</h1>
+                      <div class="loyalty-points">
+                        <h3 class="text-large text-white font-regular">320</h3>
+                        <h4 class="text-white font-regular">points</h4>
+                      </div>
+                    </div>
+                    <div class="card-shadow"></div>
+                  </div>
+                  <!-- Card -->
+                  <div class="loyalty-slider">
+                    <h3 class="font-regular text-center">
+                      180 points become a master
+                    </h3>
+                    <div class="card-slider">
+                      <div class="blue"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Profile Loyalty Section -->
               </div>
-              <!-- Profile Hero -->
-              <div class="profile-hero">
-                <div class="profile-avatar">
+              <!-- Profile Content -->
+            </div>
+            <!-- Profile Section -->
+          </aside>
+          <!-- Card Section -->
+
+          <section class="account-dashboard-section">
+            <nav class="dashboard-nav">
+              <a href="/pages/profile/profile.html">
+                <h1 class="font-light text-medium">Account Settings</h1>
+              </a>
+              <a href="#" class="isActive">
+                <h1 class="font-light text-medium">Order History</h1>
+              </a>
+            </nav>
+            <!-- Container Ticket Information -->
+            <div class="details-information">
+              <div class="details-movie">
+                <div class="title-movie">
+                  <h3 class="font-light text-secondary text-extra-small">
+                    Tuesday, 07 July 2020 - 04:30pm
+                  </h3>
+                  <h1 class="font-regular">Spider-Man: Homecoming</h1>
+                </div>
+                <div class="cinema-movie">
                   <img
-                    src="https://img-highend.okezone.com/okz/900/pictureArticle/images_424wQl2v_iD69O9.jpg"
-                    alt="Photo Profile Avatar"
+                    src="/assets/icon/sponsor/CineOne-logo.svg"
+                    alt="Cine One Logo"
                   />
                 </div>
-                <div class="profile-name">
-                  <h2 class="font-regular">Fathia Izzati</h2>
-                  <h4 class="font-regular text-secondary">Moviegoers</h4>
-                </div>
               </div>
-              <!-- profile Hero -->
-              <hr />
-              <!-- Profile Loyalty Seciton -->
-              <div class="profile-loyalty">
-                <h3 class="font-regular">Loyalty Points</h3>
-                <!-- Card -->
-                <div class="loyalty-card-wrapper">
-                  <div class="loyalty-card">
-                    <div class="ornament">
-                      <img
-                        src="/assets/components/ellips1.svg"
-                        alt="Ellips 1 icon"
-                      />
-                      <img
-                        src="/assets/components/ellips2.svg"
-                        alt="Ellips 2 Icon"
-                      />
-                      <img src="/assets/components/star.svg" alt="Star Icon" />
-                    </div>
-                    <h1 class="text-white font-regular">Moviegoers</h1>
-                    <div class="loyalty-points">
-                      <h3 class="text-large text-white font-regular">320</h3>
-                      <h4 class="text-white font-regular">points</h4>
-                    </div>
-                  </div>
-                  <div class="card-shadow"></div>
+              <hr class="split-card" />
+              <div class="ticket-status">
+                <div class="ticket-button">
+                  <button type="button" id="active">Ticket in active</button>
+                  <button type="button" id="not-paid">Not Paid</button>
                 </div>
-                <!-- Card -->
-                <div class="loyalty-slider">
-                  <h3 class="font-regular text-center">
-                    180 points become a master
+                <a
+                  href="/pages/profile/order-history-notpaid.html"
+                  class="show-details"
+                >
+                  <h4 class="text-secondary font-regular">Show Details</h4>
+                  <img
+                    src="/assets/components/arrow-down.svg"
+                    alt="Arrow down icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Container Ticket Information -->
+            <!-- Container Ticket Information -->
+            <div class="details-information">
+              <div class="details-movie">
+                <div class="title-movie">
+                  <h3 class="font-light text-secondary text-extra-small">
+                    Monday, 14 June 2020 - 02:00pm
                   </h3>
-                  <div class="card-slider">
-                    <div class="blue"></div>
-                  </div>
+                  <h1 class="font-regular">Avengers: End Game</h1>
+                </div>
+                <div class="cinema-movie">
+                  <img
+                    src="/assets/icon/sponsor/ebv-logo.svg"
+                    alt="Cine One Logo"
+                  />
                 </div>
               </div>
-              <!-- Profile Loyalty Section -->
-            </div>
-            <!-- Profile Content -->
-          </div>
-          <!-- Profile Section -->
-        </aside>
-        <!-- Card Section -->
-
-        <section class="account-dashboard-section">
-          <nav class="dashboard-nav">
-            <a href="/pages/profile/profile.html">
-              <h1 class="font-light text-medium">Account Settings</h1>
-            </a>
-            <a href="#" class="isActive">
-              <h1 class="font-light text-medium">Order History</h1>
-            </a>
-          </nav>
-          <!-- Container Ticket Information -->
-          <div class="details-information">
-            <div class="details-movie">
-              <div class="title-movie">
-                <h3 class="font-light text-secondary text-extra-small">
-                  Tuesday, 07 July 2020 - 04:30pm
-                </h3>
-                <h1 class="font-regular">Spider-Man: Homecoming</h1>
-              </div>
-              <div class="cinema-movie">
-                <img
-                  src="/assets/icon/sponsor/CineOne-logo.svg"
-                  alt="Cine One Logo"
-                />
+              <hr class="split-card" />
+              <div class="ticket-status">
+                <div class="ticket-button">
+                  <button type="button" id="used">Ticket Used</button>
+                  <button type="button" id="paid">Paid</button>
+                </div>
+                <a
+                  href="/pages/profile/order-history-paid.html"
+                  class="show-details"
+                >
+                  <h4 class="text-secondary font-regular">Show Details</h4>
+                  <img
+                    src="/assets/components/arrow-down.svg"
+                    alt="Arrow down icon"
+                  />
+                </a>
               </div>
             </div>
-            <hr class="split-card" />
-            <div class="ticket-status">
-              <div class="ticket-button">
-                <button type="button" id="active">Ticket in active</button>
-                <button type="button" id="not-paid">Not Paid</button>
+            <!-- Container Ticket Information -->
+            <!-- Container Ticket Information -->
+            <div class="details-information">
+              <div class="details-movie">
+                <div class="title-movie">
+                  <h3 class="font-light text-secondary text-extra-small">
+                    Monday, 14 June 2020 - 02:00pm
+                  </h3>
+                  <h1 class="font-regular">Avengers: End Game</h1>
+                </div>
+                <div class="cinema-movie">
+                  <img
+                    src="/assets/icon/sponsor/ebv-logo.svg"
+                    alt="Cine One Logo"
+                  />
+                </div>
               </div>
-              <a
-                href="/pages/profile/order-history-notpaid.html"
-                class="show-details"
-              >
-                <h4 class="text-secondary font-regular">Show Details</h4>
-                <img
-                  src="/assets/components/arrow-down.svg"
-                  alt="Arrow down icon"
-                />
-              </a>
-            </div>
-          </div>
-          <!-- Container Ticket Information -->
-          <!-- Container Ticket Information -->
-          <div class="details-information">
-            <div class="details-movie">
-              <div class="title-movie">
-                <h3 class="font-light text-secondary text-extra-small">
-                  Monday, 14 June 2020 - 02:00pm
-                </h3>
-                <h1 class="font-regular">Avengers: End Game</h1>
-              </div>
-              <div class="cinema-movie">
-                <img
-                  src="/assets/icon/sponsor/ebv-logo.svg"
-                  alt="Cine One Logo"
-                />
+              <hr class="split-card" />
+              <div class="ticket-status">
+                <div class="ticket-button">
+                  <button type="button" id="used">Ticket Used</button>
+                  <button type="button" id="paid">Paid</button>
+                </div>
+                <a href="#" class="show-details">
+                  <h4 class="text-secondary font-regular">Show Details</h4>
+                  <img
+                    src="/assets/components/arrow-down.svg"
+                    alt="Arrow down icon"
+                  />
+                </a>
               </div>
             </div>
-            <hr class="split-card" />
-            <div class="ticket-status">
-              <div class="ticket-button">
-                <button type="button" id="used">Ticket Used</button>
-                <button type="button" id="paid">Paid</button>
-              </div>
-              <a
-                href="/pages/profile/order-history-paid.html"
-                class="show-details"
-              >
-                <h4 class="text-secondary font-regular">Show Details</h4>
-                <img
-                  src="/assets/components/arrow-down.svg"
-                  alt="Arrow down icon"
-                />
-              </a>
-            </div>
-          </div>
-          <!-- Container Ticket Information -->
-          <!-- Container Ticket Information -->
-          <div class="details-information">
-            <div class="details-movie">
-              <div class="title-movie">
-                <h3 class="font-light text-secondary text-extra-small">
-                  Monday, 14 June 2020 - 02:00pm
-                </h3>
-                <h1 class="font-regular">Avengers: End Game</h1>
-              </div>
-              <div class="cinema-movie">
-                <img
-                  src="/assets/icon/sponsor/ebv-logo.svg"
-                  alt="Cine One Logo"
-                />
-              </div>
-            </div>
-            <hr class="split-card" />
-            <div class="ticket-status">
-              <div class="ticket-button">
-                <button type="button" id="used">Ticket Used</button>
-                <button type="button" id="paid">Paid</button>
-              </div>
-              <a href="#" class="show-details">
-                <h4 class="text-secondary font-regular">Show Details</h4>
-                <img
-                  src="/assets/components/arrow-down.svg"
-                  alt="Arrow down icon"
-                />
-              </a>
-            </div>
-          </div>
-          <!-- Container Ticket Information -->
-        </section>
+            <!-- Container Ticket Information -->
+          </section>
+        </div>
       </div>
     </main>
 
