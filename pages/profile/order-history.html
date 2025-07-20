@@ -18,11 +18,10 @@
           <a href="#"><li>Buy Ticket</li></a>
         </ul>
       </nav>
+
       <div class="avatar-nav">
-        <div>
-          <h3 class="font-regular">Location</h3>
-          <img src="/assets/components/arrow-down.svg" alt="Arrow down icon" />
-        </div>
+        <h3 class="font-regular">Location</h3>
+        <img src="/assets/components/arrow-down.svg" alt="Arrow down icon" />
         <i class="fa-solid fa-magnifying-glass"></i>
         <div class="profile-avatar">
           <img
@@ -30,7 +29,6 @@
             alt="Photo Profile Avatar"
           />
         </div>
-      </div>
     </header>
     <main>
       <div class="profile-wrapper">
@@ -104,96 +102,115 @@
 
         <section class="account-dashboard-section">
           <nav class="dashboard-nav">
-            <a href="#" class="isActive">
+            <a href="/pages/profile/profile.html">
               <h1 class="font-light text-medium">Account Settings</h1>
             </a>
-            <a href="/pages/profile/order-history.html">
+            <a href="#" class="isActive">
               <h1 class="font-light text-medium">Order History</h1>
             </a>
           </nav>
-          <form>
-            <!-- Container Account settings -->
-            <div class="details-information">
-              <h1 class="font-light text-medium">Account Settings</h1>
-              <hr />
-              <div class="details-information-form">
-                <div class="account-setting-input">
-                  <div class="settings-wrapper">
-                    <label for="first-name">First Name</label>
-                    <input
-                      type="text"
-                      name="first-name"
-                      id="first-name"
-                      value="Fathia"
-                    />
-                  </div>
-                  <div class="settings-wrapper">
-                    <label for="last-name">Last Name</label>
-                    <input
-                      type="text"
-                      name="last-name"
-                      id="last-name"
-                      value="Izzati"
-                    />
-                  </div>
-                </div>
-                <div class="account-setting-input">
-                  <div class="settings-wrapper">
-                    <label for="first-name">E-mail</label>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      value="Fathiaizzati@gmail.com"
-                    />
-                  </div>
-                  <div class="settings-wrapper">
-                    <span>+62</span>
-                    <label for="personal-number">Phone Number</label>
-                    <input
-                      type="tel"
-                      name="personal-number"
-                      id="personal-number"
-                      value="81445687121"
-                    />
-                  </div>
-                </div>
+          <!-- Container Ticket Information -->
+          <div class="details-information">
+            <div class="details-movie">
+              <div class="title-movie">
+                <h3 class="font-light text-secondary text-extra-small">
+                  Tuesday, 07 July 2020 - 04:30pm
+                </h3>
+                <h1 class="font-regular">Spider-Man: Homecoming</h1>
+              </div>
+              <div class="cinema-movie">
+                <img
+                  src="/assets/icon/sponsor/CineOne-logo.svg"
+                  alt="Cine One Logo"
+                />
               </div>
             </div>
-            <!-- Container Account settings -->
-
-            <!-- Container Privacy Account settings -->
-            <div class="details-information">
-              <h1 class="font-light text-medium">Account and Privacy</h1>
-              <hr />
-              <div class="details-information-form">
-                <div class="account-setting-input">
-                  <div class="settings-wrapper">
-                    <label for="new-password">New Password</label>
-                    <input
-                      type="password"
-                      name="new-password"
-                      id="new-password"
-                      placeholder="Write your password"
-                    />
-                    <i class="fa-solid fa-eye eye"></i>
-                  </div>
-                  <div class="settings-wrapper">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input
-                      type="password"
-                      name="confirm-password"
-                      id="confirm-password"
-                      placeholder="Confirm your password"
-                    />
-                    <i class="fa-solid fa-eye eye"></i>
-                  </div>
-                </div>
+            <hr class="split-card" />
+            <div class="ticket-status">
+              <div class="ticket-button">
+                <button type="button" id="active">Ticket in active</button>
+                <button type="button" id="not-paid">Not Paid</button>
+              </div>
+              <a
+                href="/pages/profile/order-history-notpaid.html"
+                class="show-details"
+              >
+                <h4 class="text-secondary font-regular">Show Details</h4>
+                <img
+                  src="/assets/components/arrow-down.svg"
+                  alt="Arrow down icon"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- Container Ticket Information -->
+          <!-- Container Ticket Information -->
+          <div class="details-information">
+            <div class="details-movie">
+              <div class="title-movie">
+                <h3 class="font-light text-secondary text-extra-small">
+                  Monday, 14 June 2020 - 02:00pm
+                </h3>
+                <h1 class="font-regular">Avengers: End Game</h1>
+              </div>
+              <div class="cinema-movie">
+                <img
+                  src="/assets/icon/sponsor/ebv-logo.svg"
+                  alt="Cine One Logo"
+                />
               </div>
             </div>
-            <!-- Container Privacy Account settings -->
-            <button type="submit">Update Changes</button>
-          </form>
+            <hr class="split-card" />
+            <div class="ticket-status">
+              <div class="ticket-button">
+                <button type="button" id="used">Ticket Used</button>
+                <button type="button" id="paid">Paid</button>
+              </div>
+              <a
+                href="/pages/profile/order-history-paid.html"
+                class="show-details"
+              >
+                <h4 class="text-secondary font-regular">Show Details</h4>
+                <img
+                  src="/assets/components/arrow-down.svg"
+                  alt="Arrow down icon"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- Container Ticket Information -->
+          <!-- Container Ticket Information -->
+          <div class="details-information">
+            <div class="details-movie">
+              <div class="title-movie">
+                <h3 class="font-light text-secondary text-extra-small">
+                  Monday, 14 June 2020 - 02:00pm
+                </h3>
+                <h1 class="font-regular">Avengers: End Game</h1>
+              </div>
+              <div class="cinema-movie">
+                <img
+                  src="/assets/icon/sponsor/ebv-logo.svg"
+                  alt="Cine One Logo"
+                />
+              </div>
+            </div>
+            <hr class="split-card" />
+            <div class="ticket-status">
+              <div class="ticket-button">
+                <button type="button" id="used">Ticket Used</button>
+                <button type="button" id="paid">Paid</button>
+              </div>
+              <a href="#" class="show-details">
+                <h4 class="text-secondary font-regular">Show Details</h4>
+                <img
+                  src="/assets/components/arrow-down.svg"
+                  alt="Arrow down icon"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- Container Ticket Information -->
         </section>
       </div>
     </main>
