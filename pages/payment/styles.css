@@ -637,7 +637,7 @@ main {
   }
 
   .modal-wrapper {
-    padding: 10px;
+    padding: 40px;
   }
 
   .modal-container {
@@ -648,7 +648,7 @@ main {
   .book-seat-section {
     height: fit-content;
     width: 0;
-    padding: 40px Im !important;
+    padding: 20px;
   }
 
   .card-movies-payment {
