@@ -135,6 +135,16 @@
   right: 10px;
 }
 
+/* input[type="time"]::-webkit-calendar-picker-indicator {
+  background: none;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: none;
+  cursor: pointer;
+} */
+
 .input-component input {
   padding: 15px;
   width: 250px;

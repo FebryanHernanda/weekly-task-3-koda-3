@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tickitz Ticketing Website" />
+    <title>Tickitz - Landing</title>
+    <link rel="stylesheet" href="/pages/global.css" />
+    <link rel="stylesheet" href="/pages/profile/styles.css" />
+  </head>
+  <body>
+    <header class="header-2">
+      <img src="/assets/icon/tickitz-logo-blue.svg" alt="Tickitz Logo" />
+      <nav>
+        <ul>
+          <a href="/pages/landing/landing.html"> <li>Home</li> </a>
+          <a href="/pages/landing/listmovies.html"> <li>Movie</li> </a>
+          <a href="#"><li>Buy Ticket</li></a>
+        </ul>
+      </nav>
+      <div class="avatar-nav">
+        <div>
+          <h3 class="font-regular">Location</h3>
+          <img src="/assets/components/arrow-down.svg" alt="Arrow down icon" />
+        </div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="profile-avatar">
+          <img
+            src="https://img-highend.okezone.com/okz/900/pictureArticle/images_424wQl2v_iD69O9.jpg"
+            alt="Photo Profile Avatar"
+          />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="profile-wrapper">
+        <!-- Card section -->
+        <aside class="profile-section">
+          <!-- Profile Card -->
+          <div class="profile-card">
+            <!-- Profile COntent -->
+            <div class="profile-content">
+              <div class="wrapper">
+                <h3 class="font-regular">INFO</h3>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+              <!-- Profile Hero -->
+              <div class="profile-hero">
+                <div class="profile-avatar">
+                  <img
+                    src="https://img-highend.okezone.com/okz/900/pictureArticle/images_424wQl2v_iD69O9.jpg"
+                    alt="Photo Profile Avatar"
+                  />
+                </div>
+                <div class="profile-name">
+                  <h2 class="font-regular">Fathia Izzati</h2>
+                  <h4 class="font-regular text-secondary">Moviegoers</h4>
+                </div>
+              </div>
+              <!-- profile Hero -->
+              <hr />
+              <!-- Profile Loyalty Seciton -->
+              <div class="profile-loyalty">
+                <h3 class="font-regular">Loyalty Points</h3>
+                <!-- Card -->
+                <div class="loyalty-card-wrapper">
+                  <div class="loyalty-card">
+                    <div class="ornament">
+                      <img
+                        src="/assets/components/ellips1.svg"
+                        alt="Ellips 1 icon"
+                      />
+                      <img
+                        src="/assets/components/ellips2.svg"
+                        alt="Ellips 2 Icon"
+                      />
+                      <img src="/assets/components/star.svg" alt="Star Icon" />
+                    </div>
+                    <h1 class="text-white font-regular">Moviegoers</h1>
+                    <div class="loyalty-points">
+                      <h3 class="text-large text-white font-regular">320</h3>
+                      <h4 class="text-white font-regular">points</h4>
+                    </div>
+                  </div>
+                  <div class="card-shadow"></div>
+                </div>
+                <!-- Card -->
+                <div class="loyalty-slider">
+                  <h3 class="font-regular text-center">
+                    180 points become a master
+                  </h3>
+                  <div class="card-slider">
+                    <div class="blue"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Profile Loyalty Section -->
+            </div>
+            <!-- Profile Content -->
+          </div>
+          <!-- Profile Section -->
+        </aside>
+        <!-- Card Section -->
+
+        <section class="account-dashboard-section">
+          <nav class="dashboard-nav">
+            <a href="#" class="isActive">
+              <h1 class="font-light text-medium">Account Settings</h1>
+            </a>
+            <a href="/pages/profile/order-history.html">
+              <h1 class="font-light text-medium">Order History</h1>
+            </a>
+          </nav>
+          <form>
+            <!-- Container Account settings -->
+            <div class="details-information">
+              <h1 class="font-light text-medium">Account Settings</h1>
+              <hr />
+              <div class="details-information-form">
+                <div class="account-setting-input">
+                  <div class="settings-wrapper">
+                    <label for="first-name">First Name</label>
+                    <input
+                      type="text"
+                      name="first-name"
+                      id="first-name"
+                      value="Fathia"
+                    />
+                  </div>
+                  <div class="settings-wrapper">
+                    <label for="last-name">Last Name</label>
+                    <input
+                      type="text"
+                      name="last-name"
+                      id="last-name"
+                      value="Izzati"
+                    />
+                  </div>
+                </div>
+                <div class="account-setting-input">
+                  <div class="settings-wrapper">
+                    <label for="first-name">E-mail</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      value="Fathiaizzati@gmail.com"
+                    />
+                  </div>
+                  <div class="settings-wrapper">
+                    <span>+62</span>
+                    <label for="personal-number">Phone Number</label>
+                    <input
+                      type="tel"
+                      name="personal-number"
+                      id="personal-number"
+                      value="81445687121"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Container Account settings -->
+
+            <!-- Container Privacy Account settings -->
+            <div class="details-information">
+              <h1 class="font-light text-medium">Account and Privacy</h1>
+              <hr />
+              <div class="details-information-form">
+                <div class="account-setting-input">
+                  <div class="settings-wrapper">
+                    <label for="new-password">New Password</label>
+                    <input
+                      type="password"
+                      name="new-password"
+                      id="new-password"
+                      placeholder="Write your password"
+                    />
+                    <i class="fa-solid fa-eye eye"></i>
+                  </div>
+                  <div class="settings-wrapper">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input
+                      type="password"
+                      name="confirm-password"
+                      id="confirm-password"
+                      placeholder="Confirm your password"
+                    />
+                    <i class="fa-solid fa-eye eye"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Container Privacy Account settings -->
+            <button type="submit">Update Changes</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-list">
+        <div class="footer-logo">
+          <img src="/assets/icon/tickitz-logo-blue.svg" alt="Tickitz Logo" />
+          <p class="font-light text-small">
+            Stop waiting in line. Buy tickets conveniently, watch movies
+            quietly.
+          </p>
+        </div>
+
+        <div class="footer-explore">
+          <h3>Explore</h3>
+          <ul class="explore-list">
+            <a href="#"> <li>Cinemas</li> </a>
+            <a href="#"> <li>Movies List</li> </a>
+            <a href="#"><li>My Ticket</li></a>
+            <a href="#"><li>Notifications</li></a>
+          </ul>
+        </div>
+
+        <div class="footer-sponsor">
+          <h3>Our Sponsor</h3>
+          <ul class="sponsor-list">
+            <li>
+              <img
+                src="/assets//icon/sponsor/ebv-logo.svg"
+                alt="EBV Sponsor Logo"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets//icon/sponsor/CineOne-logo.svg"
+                alt="CineOne Sponsor Logo"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets//icon/sponsor/hiflix-logo.svg"
+                alt="hiflix Sponsor Logo"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-socialmedia">
+          <h3>Follow Us</h3>
+          <ul class="socialmedia-list">
+            <li>
+              <img
+                src="/assets//icon/socialmedia/facebook-icon.svg"
+                alt="Facebook Logo"
+              />
+              <a href="#">Tickitz Cinema id</a>
+            </li>
+            <li>
+              <img
+                src="/assets//icon/socialmedia/instagram-icon.svg"
+                alt="Instagram Logo"
+              />
+              <a href="#">tickitz.id</a>
+            </li>
+            <li>
+              <img
+                src="/assets//icon/socialmedia/twitter-icon.svg"
+                alt="twitter Logo"
+              />
+              <a href="#">tickitz.id</a>
+            </li>
+            <li>
+              <img
+                src="/assets//icon/socialmedia/youtube-icon.svg"
+                alt="Youtube Logo"
+              />
+              <a href="#">Tickitz Cinema id</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h5 class="text-medium font-regular">
+        © 2020 Tickitz. All Rights Reserved.
+      </h5>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/21b38282b1.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
