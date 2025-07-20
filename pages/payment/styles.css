@@ -635,6 +635,15 @@ main {
     padding-top: 0;
   }
 
+  .modal-wrapper {
+    padding: 10px;
+  }
+
+  .modal-container {
+    width: fit-content;
+    padding: 10px;
+  }
+
   .book-seat-section {
     height: fit-content;
     width: 0;
@@ -662,6 +671,10 @@ main {
 
   .payment-method-wrapper button img {
     width: 90%;
+  }
+
+  .payment-progress-section {
+    padding: 0;
   }
 }
 

@@ -13,7 +13,7 @@
       <img src="/assets/icon/tickitz-logo-blue.svg" alt="Tickitz Logo" />
       <nav>
         <ul>
-          <a href="/pages/landing/landing.html"> <li>Home</li> </a>
+          <a href="/index.html"> <li>Home</li> </a>
           <a href="/pages/landing/listmovies.html"> <li>Movie</li> </a>
           <a href="#"><li>Buy Ticket</li></a>
         </ul>
@@ -235,33 +235,37 @@
       </div>
       <!-- Payment Modal -->
       <div class="modal">
-        <div class="modal-container">
-          <div class="modal-body">
-            <h1 class="font-semi-bold">Payment Info</h1>
-            <div class="wrapper">
-              <h4 class="font-regular text-secondary">No. Rekening Virtual</h4>
+        <div class="modal-wrapper">
+          <div class="modal-container">
+            <div class="modal-body">
+              <h1 class="font-semi-bold">Payment Info</h1>
               <div class="wrapper">
-                <h3 class="font-regular">12321328913829724</h3>
-                <button>Copy</button>
+                <h4 class="font-regular text-secondary">
+                  No. Rekening Virtual
+                </h4>
+                <div class="wrapper">
+                  <h3 class="font-regular">12321328913829724</h3>
+                  <button>Copy</button>
+                </div>
               </div>
+              <div class="wrapper">
+                <h4 class="font-regular text-secondary">Total Payment</h4>
+                <h3 class="font-regular text-blue">$30</h3>
+              </div>
+              <p class="text-secondary" style="line-height: 1.5">
+                Pay this payment bill before it is due,
+                <span class="text-red">on June 23, 2023</span>. If the bill has
+                not been paid by the specified time, it will be forfeited
+              </p>
             </div>
-            <div class="wrapper">
-              <h4 class="font-regular text-secondary">Total Payment</h4>
-              <h3 class="font-regular text-blue">$30</h3>
+            <div class="modal-button">
+              <a href="/pages/payment/ticket-results.html">
+                <button>Check Payment</button>
+              </a>
+              <a href="/pages/payment/payment-details.html">
+                <button>Pay Later</button>
+              </a>
             </div>
-            <p class="text-secondary" style="line-height: 1.5">
-              Pay this payment bill before it is due,
-              <span class="text-red">on June 23, 2023</span>. If the bill has
-              not been paid by the specified time, it will be forfeited
-            </p>
-          </div>
-          <div class="modal-button">
-            <a href="/pages/payment/ticket-results.html">
-              <button>Check Payment</button>
-            </a>
-            <a href="/pages/payment/payment-details.html">
-              <button>Pay Later</button>
-            </a>
           </div>
         </div>
         <!-- Payment modal -->
