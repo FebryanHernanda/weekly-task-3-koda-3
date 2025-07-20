@@ -1,14 +1,14 @@
 # Weekly Task 3 - Koda 3
 
-Ini adalah project web saya untuk **Weekly Task 3** dari **Koda 3**.
+This is a web project created for **Weekly Task 3** of **Koda 3**.
 
-## 📚 Deskripsi
+## 📚 Description
 
-Website ini dibuat sebagai bagian dari latihan dan pengembangan keterampilan sebagai web develper. Fokus utama pada tugas ini adalah:
+This website was built as part of an exercise to develop and improve frontend skills as a web developer. The main focus of this task includes:
 
-- Membangun struktur halaman web yang rapi
-- Menerapkan layout responsif
-- Mengasah kemampuan HTML, dan CSS
+- Building a clean and structured web page
+- Implementing responsive layout
+- Practicing HTML and CSS fundamentals
 
 ## 🛠️ Tech Stack
 
