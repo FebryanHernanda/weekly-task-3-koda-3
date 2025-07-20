@@ -19,7 +19,6 @@ body {
   position: relative;
   top: 40px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     "movie-1 movie-2"
     "movie-3 movie-4"
@@ -106,6 +105,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding-top: 30px;
 }
 
 .card-movies {
@@ -444,24 +444,111 @@ input:focus {
 /* Hero list movies Pages styles */
 
 /* Breakpoints */
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hero {
     flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .hero-right {
+    margin: 0 auto;
+  }
+
+  .why-choose-us {
+    text-align: center;
+  }
+
+  .why-choose-us .card-container {
+    justify-content: center;
   }
 
   .card-container {
+    width: 100%;
     flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .card-wrapper {
+    align-items: center;
+  }
+
+  .card-movies {
+    width: 40%;
+  }
+
+  .movies-img-2 img {
+    width: 100%;
   }
 
   .form-newslatters {
     flex-wrap: wrap;
   }
 
-  .next-button {
-    display: none;
+  .search-list ul {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .search-menu-listmovies {
+    width: 100%;
+  }
+
+  .search-component {
+    width: 100%;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .search-event {
+    width: 100%;
+  }
+
+  .search-menu-listmovies {
+    flex-wrap: wrap;
+  }
+
+  .next-button {
+    display: flex;
+  }
+
+  .newslatters-container {
+    padding: 50px 20px;
+  }
+
+  .newslatters-container h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .search-component input {
+    width: 250px;
+  }
+
+  .card-movies {
+    width: 100%;
+  }
+
+  .hero-right img {
+    width: 80%;
+  }
+
+  .movie-1 {
+    justify-self: end;
+  }
+
+  .movie-3 {
+    bottom: 55px;
+    justify-self: end;
+  }
+
+  .hero-listmovies h1 {
+    font-size: 48px;
+  }
+
+  .wrapper-upcoming {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
