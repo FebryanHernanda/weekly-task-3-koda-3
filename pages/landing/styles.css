@@ -456,6 +456,7 @@ input:focus {
 
   .why-choose-us .card-container {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .card-container {
