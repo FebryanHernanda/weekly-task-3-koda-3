@@ -371,10 +371,18 @@ nav {
   position: absolute;
   width: 100%;
   right: 0;
-  bottom: 303px;
+  bottom: 383px;
 }
 
-/* Ticket information Not Paid */
+/* Ticket information pAID Paid */
+
+.split-card-2-paid {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: 90px;
+}
+
 .ticket-paid-information {
   display: flex;
   gap: 50px;
