@@ -552,4 +552,12 @@ input:focus {
     flex-direction: column;
     gap: 20px;
   }
+
+  .form-newslatters input {
+    width: 100%;
+  }
+
+  .form-newslatters button {
+    width: 100%;
+  }
 }
