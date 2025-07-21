@@ -45,14 +45,6 @@ body {
 }
 
 /* Contaienr After Hero */
-/* .container {
-  margin: 0 auto;
-  padding: 50px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 100px;
-  max-width: 1366px;
-} */
 
 /* Why Choose Us */
 
@@ -72,6 +64,8 @@ body {
 .card-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .card-wrapper {
@@ -127,14 +121,15 @@ body {
   width: 100%;
 }
 
+.movies-img-2 img {
+  width: 100%;
+}
+
 .card-overlay {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  inset: 0;
   border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
@@ -465,8 +460,7 @@ input:focus {
 
   .card-container {
     width: 100%;
-    flex-wrap: wrap;
-    gap: 30px;
+    justify-content: space-around;
   }
 
   .card-wrapper {
@@ -474,11 +468,7 @@ input:focus {
   }
 
   .card-movies {
-    width: 40%;
-  }
-
-  .movies-img-2 img {
-    width: 100%;
+    width: 35%;
   }
 
   .form-newslatters {
@@ -520,9 +510,30 @@ input:focus {
   .newslatters-container h1 {
     font-size: 30px;
   }
+
+  .card-movies {
+    width: 45%;
+  }
+
+  .card-container {
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 640px) {
+  .card-container {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+  }
+
+  .movies-img img {
+    width: unset;
+  }
+
+  .movies-img-2 img {
+    width: unset;
+  }
+
   .search-component input {
     width: 250px;
   }
