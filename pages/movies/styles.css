@@ -291,21 +291,33 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 50px;
   }
 
-  .movie-title {
-    align-items: center;
+  .movie-directed-cast {
+    width: 250px;
+  }
+
+  .movie-directed-cast h4 {
+    text-align: center;
+  }
+
+  .movie-release-date {
+    width: 200px;
+  }
+
+  .movie-release-date h4 {
+    text-align: center;
+  }
+
+  .movie-title .tags-movies {
+    justify-content: center;
   }
 
   .movie-title h1 {
     text-align: center;
   }
 
-  .movie-directed-cast {
-    width: 150px;
-  }
-
   .movie-section img {
-    bottom: 630px;
-    left: 60px;
+    bottom: 580px;
+    left: 70px;
   }
 }
 
