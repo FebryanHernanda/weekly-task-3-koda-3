@@ -295,16 +295,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 250px;
   }
 
-  .movie-directed-cast h4 {
-    text-align: center;
-  }
-
   .movie-release-date {
-    width: 200px;
-  }
-
-  .movie-release-date h4 {
-    text-align: center;
+    width: 250px;
   }
 
   .movie-title .tags-movies {
