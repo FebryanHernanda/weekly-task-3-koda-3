@@ -679,6 +679,10 @@ main {
   .payment-progress-section {
     padding: 0;
   }
+
+  .grid {
+    gap: 5px;
+  }
 }
 
 /* Breakpoints */
