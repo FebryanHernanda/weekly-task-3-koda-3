@@ -8,6 +8,7 @@
     <title>Tickitz - Sign Up</title>
     <link rel="stylesheet" href="/pages/global.css" />
     <link rel="stylesheet" href="/pages/auth/styles.css" />
+    <script src="/assets/script/auth-signup.js" defer></script>
   </head>
   <body class="background center">
     <header style="border: none">
@@ -58,17 +59,18 @@
           </div>
           <!-- Sign Up Step -->
           <!-- Form Wrapper -->
-          <form class="form-wrapper">
+          <form class="form-wrapper" id="signUp-form">
             <!-- Wrapper -->
             <div class="wrapper">
               <label for="email" class="text-medium">Email</label>
               <input
                 class="input-component text-medium"
-                type="email"
+                type="text"
                 name="email"
                 id="email"
                 placeholder="Enter your email"
               />
+              <span class="email-errorMsg"></span>
             </div>
 
             <div class="wrapper">
@@ -81,18 +83,25 @@
                   id="password"
                   placeholder="Enter your password"
                 />
-                <i class="fa-solid fa-eye eye"></i>
+                <div>
+                  <i class="fa-solid fa-eye eye"></i>
+                  <i class="fa-solid fa-eye-slash eye"></i>
+                </div>
               </div>
+              <span class="password-errorMsg"></span>
             </div>
 
-            <div class="wrapper agree-conditions">
-              <input type="checkbox" name="agreements" id="agreements" />
-              <label
-                for="agreements"
-                class="text-medium text-secondary"
-                style="cursor: pointer"
-                >I agree to terms & conditions</label
-              >
+            <div class="wrapper">
+              <div class="wrapper agree-conditions">
+                <input type="checkbox" name="agreements" id="agreements" />
+                <label
+                  for="agreements"
+                  class="text-medium text-secondary"
+                  style="cursor: pointer"
+                  >I agree to terms & conditions</label
+                >
+              </div>
+              <span class="terms-errorMsg"></span>
             </div>
 
             <button
