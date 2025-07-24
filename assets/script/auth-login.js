@@ -17,6 +17,15 @@ passUser.addEventListener("input", () => {
   passErrorMsg.textContent = "";
 });
 
+/* Check storageData from storage */
+const checkStorage = JSON.parse(localStorage.getItem("userData"));
+
+if (checkStorage) {
+  setTimeout(() => {
+    window.location.href = "/index.html";
+  }, 1000);
+}
+
 /* Login Validation */
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -25,24 +34,41 @@ loginForm.addEventListener("submit", (e) => {
   const emailValue = emailUser.value;
   const passValue = passUser.value;
 
-  //   get data value from localStorage
-  const getUser = JSON.parse(localStorage.getItem("userData"));
-  const getEmail = getUser.emailValue;
-  const getPassword = getUser.passValue;
-
   let isValid = true;
 
   if (!emailValue) {
     emailErrorMsg.innerText = "Kolom Email tidak boleh kosong!";
     emailErrorMsg.style.color = "red";
     isValid = false;
+    return;
+  } else {
+    const emailPattern = /^[a-zA-Z0–9._-]+@[a-zA-Z0–9.-]+\.[a-zA-Z]{2,4}$/;
+
+    if (!emailPattern.test(emailValue)) {
+      emailErrorMsg.innerText = "Format email tidak valid!";
+      emailErrorMsg.style.color = "red";
+      isValid = false;
+      return;
+    }
   }
 
   if (!passValue) {
     passErrorMsg.innerText = "Kolom Password tidak boleh kosong!";
     passErrorMsg.style.color = "red";
     isValid = false;
+    return;
   }
+
+  //   get data value from localStorage
+  const getUser = JSON.parse(localStorage.getItem("userData"));
+
+  if (!getUser) {
+    alert("Akun tidak ditemukan! Silahkan daftar terlebih dahulu");
+    return;
+  }
+
+  const getEmail = getUser.emailValue;
+  const getPassword = getUser.passValue;
 
   if (emailValue !== getEmail) {
     emailErrorMsg.innerText = "Email tidak ditemukan!";
@@ -62,7 +88,7 @@ loginForm.addEventListener("submit", (e) => {
     console.log(`Email : ${emailValue}`);
     console.log(`Password : ${passValue}`);
 
-    window.location.href = "/pages/profile/profile.html";
+    window.location.href = "/index.html";
   }
 });
 

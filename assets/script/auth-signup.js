@@ -23,6 +23,15 @@ termsNConditions.addEventListener("change", (e) => {
   if (e.target.checked) termsError.textContent = "";
 });
 
+/* Check storageData from storage */
+const checkStorage = JSON.parse(localStorage.getItem("userData"));
+
+if (checkStorage) {
+  setTimeout(() => {
+    window.location.href = "/index.html";
+  }, 1000);
+}
+
 /* Sign Up Form Validation */
 signUpForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -38,6 +47,7 @@ signUpForm.addEventListener("submit", (e) => {
     emailError.innerText = "Kolom Email tidak boleh kosong!";
     emailError.style.color = "red";
     isValid = false;
+    return;
   } else {
     const emailPattern = /^[a-zA-Z0–9._-]+@[a-zA-Z0–9.-]+\.[a-zA-Z]{2,4}$/;
 
@@ -45,6 +55,7 @@ signUpForm.addEventListener("submit", (e) => {
       emailError.innerText = "Format email tidak valid!";
       emailError.style.color = "red";
       isValid = false;
+      return;
     }
   }
 
@@ -52,6 +63,7 @@ signUpForm.addEventListener("submit", (e) => {
     passwordError.innerText = "Kolom Password tidak boleh kosong!";
     passwordError.style.color = "red";
     isValid = false;
+    return;
   } else {
     const passPattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[#?!@$%^&*-]).{8,}$/;
 
@@ -60,6 +72,7 @@ signUpForm.addEventListener("submit", (e) => {
         "Gunakan minimal 8 karakter dengan kombinasi 1 huruf besar, 1 huruf kecil, dan 1 spesial karakter.";
       passwordError.style.color = "red";
       isValid = false;
+      return;
     }
   }
 
@@ -67,6 +80,7 @@ signUpForm.addEventListener("submit", (e) => {
     termsError.innerText = "Pastikan anda telah menyetujui persyaratan!";
     termsError.style.color = "red";
     isValid = false;
+    return;
   }
 
   const user = {
@@ -77,13 +91,17 @@ signUpForm.addEventListener("submit", (e) => {
   const jsonString = JSON.stringify(user);
 
   if (isValid) {
-    alert("Register Berhasil!");
+    alert("Register dan Login Berhasil!, Autodirect 2 detik");
     console.log("-----form submitted-----");
     console.log(`Email : ${emailValue}`);
     console.log(`Password : ${passValue}`);
 
     /* Set Data Storage */
     localStorage.setItem("userData", jsonString);
+
+    setTimeout(() => {
+      window.location.href = "/index.html";
+    }, 2000);
   }
 });
 
