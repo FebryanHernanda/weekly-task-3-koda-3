@@ -215,7 +215,7 @@ a:hover {
   gap: 20px;
 }
 
-.avatar-nav div {
+.avatar-nav > div:nth-child(1) {
   display: flex;
   gap: 20px;
   cursor: pointer;
@@ -227,8 +227,22 @@ a:hover {
   background-color: red;
 }
 
-/* Humberger menu */
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Humberger menu */
 .menu-bars {
   display: none;
   background: none;
@@ -273,6 +287,7 @@ a:hover {
 }
 
 .menu-bars-nav ul {
+  width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -293,6 +308,67 @@ a:hover {
   gap: 50px;
   padding: 20px;
   border-top: 2px solid var(--blue-secondary);
+}
+
+/* If Login */
+.login-list {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  font-size: 16px;
+  transform: translateY(-50px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 20;
+}
+
+.show-2 {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.login-list {
+  border-radius: 9px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.not-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.not-responsive a {
+  padding: 20px;
+  border-top: 1px solid var(--blue-secondary);
+}
+
+.mobile-responsive {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.mobile-responsive a {
+  padding: 20px;
+  cursor: pointer;
+  border-top: 1px solid var(--blue-secondary);
+}
+
+.login-list a:hover {
+  color: var(--primary);
 }
 
 /* Navbar */
@@ -458,7 +534,6 @@ footer h5 {
   }
 
   nav ul,
-  .avatar-nav,
   .button-group {
     display: none;
   }
@@ -498,6 +573,14 @@ footer h5 {
     flex-wrap: wrap;
   }
 
+  .not-responsive {
+    display: none;
+  }
+
+  .mobile-responsive {
+    display: flex;
+  }
+
   footer {
     padding: 20px 50px;
   }
@@ -509,6 +592,10 @@ footer h5 {
   }
 
   .signup-step {
+    display: none;
+  }
+
+  .avatar-nav div:first-child {
     display: none;
   }
 }
