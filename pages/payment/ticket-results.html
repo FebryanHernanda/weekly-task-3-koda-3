@@ -8,6 +8,7 @@
     <title>Tickitz - Ticket Results</title>
     <link rel="stylesheet" href="/pages/global.css" />
     <link rel="stylesheet" href="/pages/payment/styles.css" />
+    <script src="/assets/script/global.js" defer></script>
   </head>
   <body>
     <header class="header-2">
@@ -20,17 +21,71 @@
         </ul>
       </nav>
 
-      <div class="button-group">
-        <a href="/pages/auth/login.html">
-          <button class="button text-small">Sign In</button>
-        </a>
-        <a href="/pages/auth/signup.html">
-          <button class="button-active text-small">Sign Up</button>
-        </a>
+      <!-- Not Login -->
+      <div class="not-login">
+        <div class="button-group">
+          <a href="/pages/auth/login.html">
+            <button class="button text-small">Sign In</button>
+          </a>
+          <a href="/pages/auth/signup.html">
+            <button class="button-active text-small">Sign Up</button>
+          </a>
+        </div>
+
+        <div class="menu-bars">
+          <button class="open-bars" onclick="openMenu()">
+            <i class="fa-solid fa-bars fa-2xl"></i>
+          </button>
+          <button class="close-bars" onclick="openMenu()">
+            <i class="fa-solid fa-xmark fa-2xl"></i>
+          </button>
+        </div>
+
+        <div class="menu-bars-nav">
+          <ul>
+            <a href="/index.html"> <li>Home</li> </a>
+            <a href="/pages/landing/listmovies.html"> <li>Movie</li> </a>
+            <a href="#"><li>Buy Ticket</li></a>
+            <div class="button-group">
+              <a href="/pages/auth/login.html">
+                <button class="button text-small">Sign In</button>
+              </a>
+              <a href="/pages/auth/signup.html">
+                <button class="button-active text-small">Sign Up</button>
+              </a>
+            </div>
+          </ul>
+        </div>
       </div>
-      <button class="menu-bars">
-        <img src="/assets/components/bar-menu-icon.svg" alt="Bar Menu Icon" />
-      </button>
+      <!-- Not login -->
+
+      <!-- Login Nav -->
+      <div class="avatar-nav">
+        <div>
+          <h3 class="font-regular">Location</h3>
+          <img src="/assets/components/arrow-down.svg" alt="Arrow down icon" />
+        </div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="profile-avatar" onclick="openMenuLogin()">
+          <img
+            src="/assets/background/ava-profile.png"
+            alt="Photo Profile Avatar"
+          />
+        </div>
+        <div class="login-list">
+          <div class="not-responsive">
+            <a href="/pages/profile/profile.html">Dashboard</a>
+            <a class="logout-button">Log Out</a>
+          </div>
+          <div class="mobile-responsive">
+            <a href="/index.html">Home </a>
+            <a href="/pages/landing/listmovies.html"> Movie </a>
+            <a href="#">Buy Ticket</a>
+            <a class="logout-button">Log Out</a>
+          </div>
+        </div>
+      </div>
+      <!-- Login Nav -->
     </header>
     <main>
       <!-- Left Container -->

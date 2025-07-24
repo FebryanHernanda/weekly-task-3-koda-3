@@ -17,12 +17,6 @@ main {
   gap: 20px;
 }
 
-/* .circle {
-  width: 69px;
-  height: 69px;
-  border-radius: 100%;
-} */
-
 .forgot-password {
   width: 100%;
   text-align: right;
@@ -152,6 +146,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  position: relative;
 }
 
 .wrapper-eye input {
@@ -159,10 +154,16 @@ main {
 }
 
 .eye {
-  padding-right: 20px;
   position: absolute;
   cursor: pointer;
+  top: 27px;
+  right: 20px;
   color: var(--text-secondary);
+  display: none;
+}
+
+.eye:last-child {
+  display: none;
 }
 
 /* Breakpoints */
