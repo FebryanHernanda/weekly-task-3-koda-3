@@ -69,11 +69,21 @@ signUpForm.addEventListener("submit", (e) => {
     isValid = false;
   }
 
+  const user = {
+    emailValue,
+    passValue,
+  };
+
+  const jsonString = JSON.stringify(user);
+
   if (isValid) {
     alert("Register Berhasil!");
     console.log("-----form submitted-----");
     console.log(`Email : ${emailValue}`);
     console.log(`Password : ${passValue}`);
+
+    /* Set Data Storage */
+    localStorage.setItem("userData", jsonString);
   }
 });
 
