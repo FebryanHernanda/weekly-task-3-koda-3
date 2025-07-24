@@ -21,9 +21,14 @@ passUser.addEventListener("input", () => {
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // get data value
+  // get data value from form input
   const emailValue = emailUser.value;
   const passValue = passUser.value;
+
+  //   get data value from localStorage
+  const getUser = JSON.parse(localStorage.getItem("userData"));
+  const getEmail = getUser.emailValue;
+  const getPassword = getUser.passValue;
 
   let isValid = true;
 
@@ -39,8 +44,25 @@ loginForm.addEventListener("submit", (e) => {
     isValid = false;
   }
 
+  if (emailValue !== getEmail) {
+    emailErrorMsg.innerText = "Email tidak ditemukan!";
+    emailErrorMsg.style.color = "red";
+    isValid = false;
+  }
+
+  if (passValue !== getPassword) {
+    passErrorMsg.innerText = "Password salah!";
+    passErrorMsg.style.color = "red";
+    isValid = false;
+  }
+
   if (isValid) {
     alert("Login Berhasil!");
+    console.log("Login berhasil!");
+    console.log(`Email : ${emailValue}`);
+    console.log(`Password : ${passValue}`);
+
+    window.location.href = "/pages/profile/profile.html";
   }
 });
 
