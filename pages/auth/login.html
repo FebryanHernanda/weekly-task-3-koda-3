@@ -8,6 +8,7 @@
     <title>Tickitz - Login</title>
     <link rel="stylesheet" href="/pages/global.css" />
     <link rel="stylesheet" href="/pages/auth/styles.css" />
+    <script src="/assets/script/auth-login.js" defer></script>
   </head>
   <body class="background center">
     <header style="border: none">
@@ -27,17 +28,18 @@
           </div>
 
           <!-- Form Wrapper -->
-          <form class="form-wrapper" action="/pages/profile/profile.html">
+          <form class="form-wrapper" id="login-form">
             <!-- Wrapper -->
             <div class="wrapper">
               <label for="email" class="text-medium">Email</label>
               <input
                 class="input-component text-medium"
-                type="email"
+                type="text"
                 name="email"
-                id="email"
+                id="email-login"
                 placeholder="Enter your email"
               />
+              <span class="email-errorMsg"></span>
             </div>
 
             <div class="wrapper">
@@ -47,11 +49,15 @@
                   class="input-component text-medium"
                   type="password"
                   name="password"
-                  id="password"
+                  id="password-login"
                   placeholder="Enter your password"
                 />
-                <i class="fa-solid fa-eye eye"></i>
+                <div>
+                  <i class="fa-solid fa-eye eye"></i>
+                  <i class="fa-solid fa-eye-slash eye"></i>
+                </div>
               </div>
+              <span class="password-errorMsg"></span>
             </div>
 
             <button
