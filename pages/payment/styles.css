@@ -346,6 +346,7 @@ main {
   flex-direction: column;
   place-content: center;
   align-items: center;
+  visibility: hidden;
 }
 
 .modal-container {
