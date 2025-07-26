@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico" />
     <title>Tickitz - Profile</title>
     <link rel="stylesheet" href="/pages/global.css" />
-    <link rel="stylesheet" href="/pages/profile/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="/assets//script/global.js" defer></script>
   </head>
   <body>
@@ -87,28 +87,38 @@
       </div>
       <!-- Login Nav -->
     </header>
-    <main>
-      <div class="container-1">
-        <div class="profile-wrapper">
+    <main class="bg-[var(--tertiary)]">
+      <div
+        class="container-1 !py-[20px] !px-[50px] max-[1025px]:!px-[50px] max-[1025px]:!py-[20px] max-[640px]:!px-[10px]"
+      >
+        <div
+          class="profile-wrapper flex gap-[20px] !py-[30px] max-[1025px]:flex-wrap"
+        >
           <!-- Card section -->
-          <aside class="profile-section">
+          <aside class="profile-section max-[1025px]:w-full">
             <!-- Profile Card -->
-            <div class="profile-card">
+            <div
+              class="profile-card bg-white rounded-[24px] w-[400px] h-full max-[1025px]:w-full"
+            >
               <!-- Profile COntent -->
-              <div class="profile-content">
-                <div class="wrapper">
+              <div
+                class="profile-content w-full flex !p-[30px] flex-col justify-between gap-[50px]"
+              >
+                <div
+                  class="wrapper flex justify-between items-center gap-[20px]"
+                >
                   <h3 class="font-regular">INFO</h3>
                   <i class="fa-solid fa-ellipsis"></i>
                 </div>
                 <!-- Profile Hero -->
-                <div class="profile-hero">
+                <div class="profile-hero flex flex-col gap-[20px] items-center">
                   <div class="profile-avatar">
                     <img
                       src="/assets/background/ava-profile.png"
                       alt="Photo Profile Avatar"
                     />
                   </div>
-                  <div class="profile-name">
+                  <div class="profile-name flex flex-col gap-[5px] text-center">
                     <h2 class="font-regular">Jonas El Rodriguez</h2>
                     <h4 class="font-regular text-secondary">Moviegoers</h4>
                   </div>
@@ -116,40 +126,58 @@
                 <!-- profile Hero -->
                 <hr />
                 <!-- Profile Loyalty Seciton -->
-                <div class="profile-loyalty">
+                <div
+                  class="profile-loyalty flex flex-col gap-[30px] max-[1025px]:w-full"
+                >
                   <h3 class="font-regular">Loyalty Points</h3>
                   <!-- Card -->
-                  <div class="loyalty-card-wrapper">
-                    <div class="loyalty-card">
-                      <div class="ornament">
+                  <div
+                    class="loyalty-card-wrapper flex flex-col items-center w-full relative max-[1025px]:w-[400px] self-center max-[640px]:w-full"
+                  >
+                    <div
+                      class="loyalty-card w-full bg-[#1d4ed8] !py-[40px] !px-[20px] rounded-[24px] flex flex-col gap-[50px] z-1 relative overflow-hidden"
+                    >
+                      <div
+                        class="ornament absolute max-[1025px]:left-[70px] max-[769px]:left-[70px] max-[500px]:left-[30px] max-[380px]:left-[-20px] max-[350px]:left-[-70px]"
+                      >
                         <img
                           src="/assets/components/ellips1.svg"
                           alt="Ellips 1 icon"
+                          class="relative right-[-210px] top-[-50px]"
                         />
                         <img
                           src="/assets/components/ellips2.svg"
                           alt="Ellips 2 Icon"
+                          class="relative right-[-240px] top-[-120px]"
                         />
                         <img
                           src="/assets/components/star.svg"
                           alt="Star Icon"
+                          class="relative right-[-250px] top-[-200px] w-[50px]"
                         />
                       </div>
                       <h1 class="text-white font-regular">Moviegoers</h1>
-                      <div class="loyalty-points">
+                      <div class="loyalty-points flex gap-[5px] items-end">
                         <h3 class="text-large text-white font-regular">320</h3>
                         <h4 class="text-white font-regular">points</h4>
                       </div>
                     </div>
-                    <div class="card-shadow"></div>
+                    <div
+                      class="card-shadow bg-[#1d4ed880] w-[380px] h-[50px] rounded-[24px] absolute bottom-[-8px] max-[450px]:w-[270px] max-[350px]:w-[220px]"
+                    ></div>
                   </div>
                   <!-- Card -->
-                  <div class="loyalty-slider">
+                  <div
+                    class="loyalty-slider flex flex-col gap-[20px] !mt-[20px]"
+                  >
                     <h3 class="font-regular text-center">
                       180 points become a master
                     </h3>
-                    <div class="card-slider">
-                      <div class="blue"></div>
+                    <div
+                      class="card-slider w-full h-[20px] rounded-[8px] bg-[#f5f6f8]"
+                      style="box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2)"
+                    >
+                      <div class="blue w-[50%] h-[20px] rounded-[8px]"></div>
                     </div>
                   </div>
                 </div>
@@ -161,59 +189,91 @@
           </aside>
           <!-- Card Section -->
 
-          <section class="account-dashboard-section">
-            <nav class="dashboard-nav">
-              <a href="#" class="isActive">
+          <section
+            class="account-dashboard-section w-full flex flex-col gap-[40px]"
+          >
+            <nav
+              class="dashboard-nav flex gap-[50px] !px-[30px] bg-white rounded-[24px]"
+            >
+              <a
+                href="#"
+                class="!text-black !py-[20px] border-b-[2px] border-b-[var(--primary)]"
+              >
                 <h1 class="font-light text-medium">Account Settings</h1>
               </a>
               <a href="/pages/profile/order-history.html">
-                <h1 class="font-light text-medium">Order History</h1>
+                <h1
+                  class="font-light !py-[20px] text-medium text-gray-500 hover:text-[var(--primary)] hover:border-b-[2px] hover:border-b-[var(--primary)]"
+                >
+                  Order History
+                </h1>
               </a>
             </nav>
-            <form>
+            <form class="flex flex-col justify-between h-full gap-[40px]">
               <!-- Container Account settings -->
-              <div class="details-information">
+              <div
+                class="details-information flex flex-col gap-[30px] !p-[30px] bg-white rounded-[24px] relative overflow-hidden"
+              >
                 <h1 class="font-light text-medium">Account Settings</h1>
                 <hr />
-                <div class="details-information-form">
-                  <div class="account-setting-input">
-                    <div class="settings-wrapper">
-                      <label for="first-name">First Name</label>
+                <div class="details-information-form flex flex-col gap-[20px]">
+                  <div
+                    class="account-setting-input flex gap-[50px] max-[640px]:flex-wrap max-[640px]:gap-[20px]"
+                  >
+                    <div
+                      class="settings-wrapper w-full flex flex-col gap-[10px] relative"
+                    >
+                      <label for="first-name ">First Name</label>
                       <input
                         type="text"
                         name="first-name"
                         id="first-name"
                         value="Jonas"
+                        class="!p-[15px] rounded-[16px] border-[1px] bg-[#fcfdfe] text-[var(--text-secondary)]"
                       />
                     </div>
-                    <div class="settings-wrapper">
+                    <div
+                      class="settings-wrapper w-full flex flex-col gap-[10px] relative"
+                    >
                       <label for="last-name">Last Name</label>
                       <input
                         type="text"
                         name="last-name"
                         id="last-name"
                         value="El Rodriguez"
+                        class="!p-[15px] rounded-[16px] border-[1px] bg-[#fcfdfe] text-[var(--text-secondary)]"
                       />
                     </div>
                   </div>
-                  <div class="account-setting-input">
-                    <div class="settings-wrapper">
+                  <div
+                    class="account-setting-input flex gap-[50px] max-[640px]:flex-wrap max-[640px]:gap-[20px]"
+                  >
+                    <div
+                      class="settings-wrapper w-full flex flex-col gap-[10px] relative"
+                    >
                       <label for="first-name">E-mail</label>
                       <input
                         type="email"
                         name="email"
                         id="email"
                         value="jonasrodrigu123@gmail.com"
+                        class="!p-[15px] rounded-[16px] border-[1px] bg-[#fcfdfe] text-[var(--text-secondary)]"
                       />
                     </div>
-                    <div class="settings-wrapper">
-                      <span>+62</span>
+                    <div
+                      class="settings-wrapper w-full flex flex-col gap-[10px] relative"
+                    >
+                      <span
+                        class="absolute !p-[10px] left-[10px] bottom-[6px] border-r-[0.5px] text-[var(--text-secondary)]"
+                        >+62</span
+                      >
                       <label for="personal-number">Phone Number</label>
                       <input
                         type="tel"
                         name="personal-number"
                         id="personal-number"
                         value="81445687121"
+                        class="!p-[15px] rounded-[16px] border-[1px] bg-[#fcfdfe] !pl-[70px] text-[var(--text-secondary)]"
                       />
                     </div>
                   </div>
@@ -222,36 +282,55 @@
               <!-- Container Account settings -->
 
               <!-- Container Privacy Account settings -->
-              <div class="details-information">
+              <div
+                class="details-information flex flex-col gap-[30px] !p-[30px] bg-[var(--white)] rounded-[24px] relative overflow-hidden"
+              >
                 <h1 class="font-light text-medium">Account and Privacy</h1>
                 <hr />
-                <div class="details-information-form">
-                  <div class="account-setting-input">
-                    <div class="settings-wrapper">
+                <div class="details-information-form flex flex-col gap-[20px]">
+                  <div
+                    class="account-setting-input flex gap-[50px] max-[640px]:flex-wrap max-[640px]:gap-[20px]"
+                  >
+                    <div
+                      class="settings-wrapper w-full flex flex-col gap-[10px] relative"
+                    >
                       <label for="new-password">New Password</label>
                       <input
                         type="password"
                         name="new-password"
                         id="new-password"
                         placeholder="Write your password"
+                        class="!p-[15px] rounded-[16px] border-[1px] bg-[#fcfdfe] text-[var(--text-secondary)]"
                       />
-                      <i class="fa-solid fa-eye eye"></i>
+                      <i
+                        class="fa-solid fa-eye eye absolute bottom-[20px] right-[20px]"
+                      ></i>
                     </div>
-                    <div class="settings-wrapper">
+                    <div
+                      class="settings-wrapper w-full flex flex-col gap-[10px] relative"
+                    >
                       <label for="confirm-password">Confirm Password</label>
                       <input
                         type="password"
                         name="confirm-password"
                         id="confirm-password"
                         placeholder="Confirm your password"
+                        class="!p-[15px] rounded-[16px] border-[1px] bg-[#fcfdfe] text-[var(--text-secondary)]"
                       />
-                      <i class="fa-solid fa-eye eye"></i>
+                      <i
+                        class="fa-solid fa-eye eye absolute bottom-[20px] right-[20px]"
+                      ></i>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- Container Privacy Account settings -->
-              <button type="submit">Update Changes</button>
+              <button
+                type="submit"
+                class="w-[400px] bg-[var(--primary)] text-white border-none !p-[20px] rounded-[16px] max-[1025px]:w-full"
+              >
+                Update Changes
+              </button>
             </form>
           </section>
         </div>
