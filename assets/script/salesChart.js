@@ -3,16 +3,34 @@ const sales = document.querySelector(".salesChart #salesChart");
 /* Data Value */
 const salesValue = [
   {
-    name: "All Movies",
-    value: [3, 7, 12, 9, 5, 8, 4, 11, 6, 10, 13, 7, 2],
+    name: "How to Train Your Dragon",
+    value: [200, 400, 150, 502],
+    time: "yearsly",
   },
   {
     name: "How to Train Your Dragon",
-    value: [6, 8, 2, 4, 8, 12, 4, 3, 2, 5, 2, 10],
+    value: [6, 8, 2, 4],
+    time: "monthly",
+  },
+  {
+    name: "How to Train Your Dragon",
+    value: [4, 8, 12, 4, 3, 2, 5],
+    time: "weekly",
   },
   {
     name: "Man with No Past",
-    value: [4, 8, 12, 4, 3, 2, 5, 2, 10, 3, 2, 5, 2],
+    value: [200, 400, 150, 502],
+    time: "yearsly",
+  },
+  {
+    name: "Man with No Past",
+    value: [6, 8, 2, 4],
+    time: "monthly",
+  },
+  {
+    name: "Man with No Past",
+    value: [4, 8, 12, 4, 3, 2, 5],
+    time: "weekly",
   },
 ];
 
@@ -20,20 +38,7 @@ const salesValue = [
 const salesChart = new Chart(sales, {
   type: "line",
   data: {
-    labels: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sept",
-      "Oct",
-      "Nov",
-      "Dec",
-    ],
+    labels: ["2021", "2022", "2023", "2024"],
     datasets: [
       {
         data: salesValue[0].value,
@@ -70,20 +75,39 @@ formSalesChart.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const moviesNameValue = document.querySelector("#movies-name").value;
-
-  if (moviesNameValue === "") {
+  const moviesTimeValue = document.querySelector("#time").value;
+  if (moviesNameValue === "" && moviesTimeValue === "") {
     alert("Pilih kategori terlebih dahulu!");
     return;
   }
 
-  const filterMovie = salesValue.filter(
-    (data) => data.name === moviesNameValue
+  const filteredData = salesValue.find(
+    (data) => data.name === moviesNameValue && data.time === moviesTimeValue
   );
 
-  const { datasets } = salesChart.data;
+  if (!filteredData) {
+    alert("Data tidak ditemukan!");
+    return;
+  }
+
+  let labelData = [];
+  switch (filteredData.time) {
+    case "yearsly":
+      labelData = ["2020", "2021", "2024", "2025"];
+      break;
+    case "monthly":
+      labelData = ["Jan", "Feb", "Mar", "Apr"];
+      break;
+    case "weekly":
+      labelData = ["Week 1", "Week 2", "Week 3", "Week 4"];
+      break;
+  }
+
+  let { datasets } = salesChart.data;
   const { plugins } = salesChart.options;
 
-  datasets[0].data = filterMovie[0].value;
+  datasets[0].data = filteredData.value;
+  salesChart.data.labels = labelData;
   plugins.title.text = moviesNameValue;
   salesChart.update();
 });
