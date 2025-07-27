@@ -448,8 +448,9 @@ footer h5 {
 }
 
 .tags {
-  padding: 10px 30px;
+  padding: 10px 10px;
   font-weight: 100;
+  font-size: 14px;
   border-radius: 20px;
   background-color: var(--tertiary);
   color: var(--text-secondary);
