@@ -8,14 +8,20 @@
     <title>Tickitz - Detail Movies</title>
     <link rel="stylesheet" href="/pages/global.css" />
     <link rel="stylesheet" href="/pages/movies/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/assets/script/global.js" defer></script>
+    <script
+      type="module"
+      src="/assets/script/setMovieDetails.js"
+      defer
+    ></script>
   </head>
   <body>
     <header class="header-2">
       <img src="/assets/icon/tickitz-logo-blue.svg" alt="Tickitz Logo" />
       <nav>
         <ul>
-          <a href="/pages/landing/landing.html"> <li>Home</li> </a>
+          <a href="/index.html"> <li>Home</li> </a>
           <a href="/pages/landing/listmovies.html"> <li>Movie</li> </a>
           <a href="#"><li>Buy Ticket</li></a>
         </ul>
@@ -96,39 +102,31 @@
         <!-- Movie Details -->
         <section class="movie-section">
           <div class="movie-details">
-            <img
-              src="/assets/background/exciting-movies/spiderman.svg"
-              alt="Spiderman Movies poster"
-            />
+            <div class="movies-img">
+              <img src="" alt="" />
+            </div>
             <div class="movie-title">
-              <h1 class="title-extra-small font-regular">
-                Spider-Man: Homecoming
-              </h1>
-              <div class="tags-movies">
-                <span class="tags">Action</span>
-                <span class="tags">Adventure</span>
-              </div>
+              <h1 class="title-extra-small font-regular"></h1>
+              <div class="tags-movies"></div>
               <div class="movie-about">
                 <div class="movie-release-date">
                   <div>
                     <h4 class="font-regular text-secondary">Release Date</h4>
-                    <h3 class="font-regular">June 28, 2017</h3>
+                    <h3 class="font-regular" id="releaseDate"></h3>
                   </div>
                   <div>
                     <h4 class="font-regular text-secondary">Duration</h4>
-                    <h3 class="font-regular">2 hours 13 minutes</h3>
+                    <h3 class="font-regular" id="durationMovies"></h3>
                   </div>
                 </div>
                 <div class="movie-directed-cast">
                   <div>
                     <h4 class="font-regular text-secondary">Directed by</h4>
-                    <h3 class="font-regular">Jon watss</h3>
+                    <h3 class="font-regular" id="directorMovies"></h3>
                   </div>
                   <div>
                     <h4 class="font-regular text-secondary">Casts</h4>
-                    <h3 class="font-regular">
-                      Tom Holland, Michael Keaton, Robert Downey Jr
-                    </h3>
+                    <h3 class="font-regular" id="castName"></h3>
                   </div>
                 </div>
               </div>
@@ -137,15 +135,7 @@
 
           <div class="movie-synopsis">
             <h3 class="font-regular">Synopsis</h3>
-            <p class="text-secondary">
-              Thrilled by his experience with the Avengers, Peter returns home,
-              where he lives with his Aunt May, under the watchful eye of his
-              new mentor Tony Stark, Peter tries to fall back into his normal
-              daily routine - distracted by thoughts of proving himself to be
-              more than just your friendly neighborhood Spider-Man - but when
-              the Vulture emerges as a new villain, everything that Peter holds
-              most important will be threatened.
-            </p>
+            <p class="text-secondary"></p>
           </div>
         </section>
         <!-- Movie Details -->
