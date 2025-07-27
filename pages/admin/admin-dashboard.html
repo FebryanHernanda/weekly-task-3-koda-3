@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tickitz Ticketing Website" />
+    <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico" />
+    <title>Tickitz - Admin Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/assets/script/global.js" defer></script>
+    <script src="/assets/script/salesChart.js" defer></script>
+    <script src="/assets/script/ticketSalesChart.js" defer></script>
+    <link rel="stylesheet" href="/pages/global.css" />
+  </head>
+  <body>
+    <header class="header-2">
+      <img src="/assets/icon/tickitz-logo-blue.svg" alt="Tickitz Logo" />
+      <nav>
+        <ul>
+          <a href="/index.html"> <li>Dashboard</li> </a>
+          <a href="#"> <li>Movies</li> </a>
+        </ul>
+      </nav>
+
+      <!-- Not Login -->
+      <div class="not-login">
+        <div class="button-group">
+          <a href="/pages/auth/login.html">
+            <button class="button text-small">Sign In</button>
+          </a>
+          <a href="/pages/auth/signup.html">
+            <button class="button-active text-small">Sign Up</button>
+          </a>
+        </div>
+
+        <div class="menu-bars">
+          <button class="open-bars" onclick="openMenu()">
+            <i class="fa-solid fa-bars fa-2xl"></i>
+          </button>
+          <button class="close-bars" onclick="openMenu()">
+            <i class="fa-solid fa-xmark fa-2xl"></i>
+          </button>
+        </div>
+
+        <div class="menu-bars-nav">
+          <ul>
+            <a href="/index.html"> <li>Home</li> </a>
+            <a href="/pages/landing/listmovies.html"> <li>Movie</li> </a>
+            <a href="#"><li>Buy Ticket</li></a>
+            <div class="button-group">
+              <a href="/pages/auth/login.html">
+                <button class="button text-small">Sign In</button>
+              </a>
+              <a href="/pages/auth/signup.html">
+                <button class="button-active text-small">Sign Up</button>
+              </a>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <!-- Not login -->
+
+      <!-- Login Nav -->
+      <div class="avatar-nav">
+        <div>
+          <h3 class="font-regular">Location</h3>
+          <img src="/assets/components/arrow-down.svg" alt="Arrow down icon" />
+        </div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="profile-avatar" onclick="openMenuLogin()">
+          <img
+            src="/assets/background/ava-profile.png"
+            alt="Photo Profile Avatar"
+          />
+        </div>
+        <div class="login-list">
+          <div class="not-responsive">
+            <a href="/pages/profile/profile.html">Dashboard</a>
+            <a class="logout-button">Log Out</a>
+          </div>
+          <div class="mobile-responsive">
+            <a href="/index.html">Home </a>
+            <a href="/pages/landing/listmovies.html"> Movie </a>
+            <a href="#">Buy Ticket</a>
+            <a class="logout-button">Log Out</a>
+          </div>
+        </div>
+      </div>
+      <!-- Login Nav -->
+    </header>
+    <!-- Main -->
+    <main class="bg-[var(--tertiary)] !py-[50px]">
+      <div class="container">
+        <!-- Sales Chart -->
+        <section
+          class="sales-chart !p-5 bg-white flex flex-col gap-5 rounded-[20px]"
+        >
+          <h1 class="text-xl">Sales Chart</h1>
+          <form class="flex flex gap-5 !pt-2" id="salesChartForm">
+            <!-- Movies Name -->
+            <label for="movies-name" class="bg-[#EFF0F6] !p-1 rounded-[8px]">
+              <select
+                name="movies-name"
+                id="movies-name"
+                class="w-[100px] md:w-[220px]"
+              >
+                <option value="">Movies Name</option>
+                <option value="How to Train Your Dragon">
+                  How to Train Your Dragon
+                </option>
+                <option value="Man with No Past">Man with No Past</option>
+              </select>
+            </label>
+            <!-- times -->
+            <label
+              for="time"
+              class="bg-[#EFF0F6] text-secondary !p-1 rounded-[8px]"
+            >
+              <select name="time" id="time" class="w-[100px]" disabled>
+                <option value="yearly">Yearly</option>
+                <option value="monthly">Monthly</option>
+                <option value="weekly">Weekly</option>
+              </select>
+            </label>
+            <button
+              class="bg-[var(--primary)] !p-1 rounded-[9px] text-white w-[100px]"
+            >
+              Filter
+            </button>
+          </form>
+
+          <div class="salesChart w-full">
+            <canvas id="salesChart"></canvas>
+          </div>
+        </section>
+
+        <!-- Ticket Sales -->
+        <section
+          class="ticket-sales !p-5 bg-white flex flex-col gap-5 rounded-[20px]"
+        >
+          <h1 class="text-xl">Ticket Sales</h1>
+          <form class="flex gap-5 !pt-2" id="ticketSalesForm">
+            <!-- category Name -->
+            <label for="category-name" class="bg-[#EFF0F6] !p-1 rounded-[8px]">
+              <select
+                name="category-name"
+                id="category-name"
+                class="w-[100px] md:w-[220px]"
+              >
+                <option value="">Category</option>
+                <option value="Action">Action</option>
+                <option value="Adventure">Adventure</option>
+              </select>
+            </label>
+            <!-- times -->
+            <label for="location" class="bg-[#EFF0F6] !p-1 rounded-[8px]">
+              <select name="location" id="location" class="w-[100px]">
+                <option value="">Location</option>
+                <option value="Jakarta">Jakarta</option>
+                <option value="Bandung">Bandung</option>
+                <option value="Bogor">Bogor</option>
+              </select>
+            </label>
+            <button
+              class="bg-[var(--primary)] !p-1 rounded-[9px] text-white w-[100px]"
+            >
+              Filter
+            </button>
+          </form>
+
+          <div class="ticketSalesChart w-full">
+            <canvas id="ticketChart"> </canvas>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-list">
+        <div class="footer-logo">
+          <img src="/assets/icon/tickitz-logo-blue.svg" alt="Tickitz Logo" />
+          <p class="font-light text-small">
+            Stop waiting in line. Buy tickets conveniently, watch movies
+            quietly.
+          </p>
+        </div>
+
+        <div class="footer-explore">
+          <h3>Explore</h3>
+          <ul class="explore-list">
+            <a href="#"> <li>Cinemas</li> </a>
+            <a href="#"> <li>Movies List</li> </a>
+            <a href="#"><li>My Ticket</li></a>
+            <a href="#"><li>Notifications</li></a>
+          </ul>
+        </div>
+
+        <div class="footer-sponsor">
+          <h3>Our Sponsor</h3>
+          <ul class="sponsor-list">
+            <li>
+              <img
+                src="/assets//icon/sponsor/ebv-logo.svg"
+                alt="EBV Sponsor Logo"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets//icon/sponsor/CineOne-logo.svg"
+                alt="CineOne Sponsor Logo"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets//icon/sponsor/hiflix-logo.svg"
+                alt="hiflix Sponsor Logo"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-socialmedia">
+          <h3>Follow Us</h3>
+          <ul class="socialmedia-list">
+            <li>
+              <img
+                src="/assets//icon/socialmedia/facebook-icon.svg"
+                alt="Facebook Logo"
+              />
+              <a href="#">Tickitz Cinema id</a>
+            </li>
+            <li>
+              <img
+                src="/assets//icon/socialmedia/instagram-icon.svg"
+                alt="Instagram Logo"
+              />
+              <a href="#">tickitz.id</a>
+            </li>
+            <li>
+              <img
+                src="/assets//icon/socialmedia/twitter-icon.svg"
+                alt="twitter Logo"
+              />
+              <a href="#">tickitz.id</a>
+            </li>
+            <li>
+              <img
+                src="/assets//icon/socialmedia/youtube-icon.svg"
+                alt="Youtube Logo"
+              />
+              <a href="#">Tickitz Cinema id</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h5 class="text-medium font-regular">
+        © 2020 Tickitz. All Rights Reserved.
+      </h5>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/21b38282b1.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
