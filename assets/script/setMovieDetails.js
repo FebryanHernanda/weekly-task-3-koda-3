@@ -11,7 +11,6 @@ const setMovieDetails = async (apiKey) => {
 
   const dataMovies = await getMovieDetails(apiKey, movieId);
   const movieCredits = await getMoviesCredits(apiKey, movieId);
-  console.log(movieCredits);
 
   /* Set Movies Jumbotron IMG */
   const moviesHeader = document.querySelector("section.hero-detail-movies");
