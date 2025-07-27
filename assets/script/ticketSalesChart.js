@@ -3,19 +3,34 @@ const ticket = document.querySelector(".ticketSalesChart #ticketChart");
 /* Data Value */
 const ticketData = [
   {
-    name: "All Movies",
+    name: "Action",
     location: "Jakarta",
-    value: [3, 7, 12, 9, 5, 8, 4, 11, 6, 10, 13, 7, 2],
+    value: [2, 5, 1, 9],
   },
   {
     name: "Action",
     location: "Bandung",
-    value: [6, 8, 2, 4, 8, 12, 4, 3, 2, 5, 2, 10],
+    value: [6, 8, 2, 4],
+  },
+  {
+    name: "Action",
+    location: "Bogor",
+    value: [4, 8, 12, 4],
+  },
+  {
+    name: "Adventure",
+    location: "Jakarta",
+    value: [2, 5, 1, 9],
+  },
+  {
+    name: "Adventure",
+    location: "Bandung",
+    value: [6, 8, 2, 4],
   },
   {
     name: "Adventure",
     location: "Bogor",
-    value: [4, 8, 12, 4, 3, 2, 5, 2, 10, 3, 2, 5, 2],
+    value: [4, 8, 12, 4],
   },
 ];
 
@@ -23,20 +38,7 @@ const ticketData = [
 const ticketChart = new Chart(ticket, {
   type: "line",
   data: {
-    labels: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sept",
-      "Oct",
-      "Nov",
-      "Dec",
-    ],
+    labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
     datasets: [
       {
         data: ticketData[0].value,
@@ -81,17 +83,11 @@ ticketSalesForm.addEventListener("submit", (e) => {
     return;
   }
 
-  let filteredData = ticketData;
+  const filteredData = ticketData.find(
+    (data) => data.name === category && data.location === location
+  );
 
-  if (category !== "") {
-    filteredData = filteredData.filter((data) => data.name === category);
-  }
-
-  if (location !== "") {
-    filteredData = filteredData.filter((data) => data.location === location);
-  }
-
-  if (filteredData.length === 0) {
+  if (!filteredData) {
     alert("Data tidak ditemukan!");
     return;
   }
@@ -99,11 +95,11 @@ ticketSalesForm.addEventListener("submit", (e) => {
   const { datasets } = ticketChart.data;
   const { plugins } = ticketChart.options;
 
-  datasets[0].data = filteredData[0].value;
+  datasets[0].data = filteredData.value;
 
   const titleParts = [];
-  if (category) titleParts.push(filteredData[0].name);
-  if (location) titleParts.push(filteredData[0].location);
+  if (category) titleParts.push(filteredData.name);
+  if (location) titleParts.push(filteredData.location);
   plugins.title.text = titleParts.join(", ");
   ticketChart.update();
 });
