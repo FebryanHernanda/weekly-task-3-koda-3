@@ -1,4 +1,4 @@
-const apiKey = process.env.TMDB_API_KEY;
+export const apiKey = "2384da3438cba5162a8ff46e5a689235";
 
 /* Fetch Popular Movies */
 export const getPopularMovies = async (apiKey) => {
