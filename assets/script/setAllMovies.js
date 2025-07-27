@@ -1,4 +1,4 @@
-import { apiKey, getPopularMovies, getGenre } from "../../api/getData.js";
+import { apiKey, getPopularMovies, getGenre } from "/assets/script/getData.js";
 
 /* Set All Movies List */
 const setListMovies = async (apiKey) => {

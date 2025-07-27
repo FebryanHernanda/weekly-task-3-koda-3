@@ -2,7 +2,7 @@ import {
   apiKey,
   getMovieDetails,
   getMoviesCredits,
-} from "../../api/getData.js";
+} from "/assets/script/getData.js";
 
 /* Set Movie Details */
 const setMovieDetails = async (apiKey) => {
